@@ -20,7 +20,8 @@
 
 <div class="row animate-box">
 	<div class='col-lg-12'>
-		<h6 class="breadcrumb-trail"><a href="#">Home</a> > <a href="{% url 'all_shows' %}">All Shows</a> > {{this_show.title}}</h6>
+		<h6 class="breadcrumb-trail"><a href="{% url 'index' %}">Home</a> > <a href="{% url 'all_shows' %}">All Shows</a> > {{this_show.title}}</h6>
+	</div>
 	<div class="col-lg-offset-2 col-lg-4 col-xs-12">
 		<div class="desc">
 			<div class="poster-image-section">
@@ -100,13 +101,13 @@
 		{{highestLowestRatedEpisodes.1|safe}}
 	</div>
 	<div class="col-lg-3 col-xs-12">
-		<h2 class="chart-header">Best Rated Episodes</h2>
+		<h2 class="chart-header">Best Episodes</h2>
 		<p>What do you think is the best episode ever of {{this_show.title}}? The chart to the right shows the five highest rated episodes ever of {{this_show.title}}. According to the fans the best episode of {{this_show.title}} was "{{episodeRatingsOverTime.4}}" with a score of {{episodeRatingsOverTime.3}}. Note that the average score for an episode of {{this_show.title}} is {{episodeRatingsOverTime.2}}.</p>
 	</div>
 </div>
 <div class="row animate-box chart-section">
 	<div class="col-lg-3 col-xs-12">
-		<h2 class="chart-header">Worst Rated Episodes</h2>
+		<h2 class="chart-header">Worst Episodes</h2>
 		<p>Of course, every episode cannot be legendary. This chart shows what fans rate as the five worst episodes in the history of {{this_show.title}}. They rate "{{episodeRatingsOverTime.6}}" as the worst episode ever with a score of {{episodeRatingsOverTime.5}}.</p>
 	</div>
 	<div class="col-lg-9 col-xs-12">

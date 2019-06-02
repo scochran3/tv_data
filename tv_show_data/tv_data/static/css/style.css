@@ -1378,6 +1378,9 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 150px;
 }
 
+.first-chart-section {
+  margin-top: 50px;
+}
 .poster-image-section {
   text-align: center;
   margin-left, margin-right: auto;
@@ -1430,7 +1433,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .separate-section {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .custom-submit {

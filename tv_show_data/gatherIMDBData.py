@@ -38,8 +38,6 @@ def getShowIMBDID(show):
 	except KeyError:
 		return None
 
-	pprint (data)
-
 	return imbd_id, total_seasons, released, rated, poster, runtime
 
 

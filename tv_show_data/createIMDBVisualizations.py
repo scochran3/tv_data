@@ -62,7 +62,7 @@ def plotNumberOfRatingsOverTime(df):
 
 	# Format plot
 	p.xaxis.axis_label = 'Episode Number'
-	p.yaxis.axis_label = 'Number of Reviews'
+	p.yaxis.axis_label = 'Number of Ratings'
 	p.yaxis.formatter = NumeralTickFormatter(format="0,0")
 	p.y_range=Range1d(0, df['number_of_ratings'].max()*1.05)
 	p.x_range=Range1d(1, df['episode_number'].max()+1)
@@ -117,7 +117,7 @@ def plotEpisodeRatingsOverTime(df):
 def plotEpisodeRatingHistogram(df):
 
 	# Create the histogram data
-	hist, edges = np.histogram(df['rating'], bins=int(len(df)/2), range=[0,10])
+	hist, edges = np.histogram(df['rating'], bins=int(len(df)/4), range=[0,10])
 	hist_df = pd.DataFrame({'counts': hist, 'left': edges[:-1], 'right': edges[1:]})
 
 	# Create the blank plot
@@ -171,6 +171,7 @@ def plotRatingsPerSeason(df):
 	p.yaxis.axis_label = 'Rating (/10)'
 	p.yaxis.formatter = NumeralTickFormatter(format="0.0")
 	p.y_range=Range1d(0, 10)
+	p.x_range=Range1d(.5, df_grouped['season'].max()+1)
 	p.yaxis.major_label_text_font = 'Work Sans'
 	p.xaxis.major_label_text_font = 'Work Sans'
 	p.yaxis.axis_label_text_font = 'Work Sans'
@@ -346,7 +347,7 @@ def compareOverallRating(df1, df2):
 	# Style the plot
 	p.xaxis.axis_label = 'Average Rating Per Episode'
 	p.yaxis.axis_label = ''
-	p.x_range=Range1d(0, df_combined['rating'].max()*1.05)
+	p.x_range=Range1d(0, 10.5)
 
 	# Data points
 	show_1_rating = round(df_combined['rating'].iloc[0], 2)
@@ -354,7 +355,7 @@ def compareOverallRating(df1, df2):
 	show_2_rating = round(df_combined['rating'].iloc[1], 2)
 	show_2_number_of_episodes = df2['episode_number'].max()
 
-
+	print (show_1_rating, show_2_rating)
 
 	# Return the figure
 	script, div = components(p)
@@ -637,4 +638,4 @@ def bestOfTheBestMostPopularEpisodes(df):
 
 
 if __name__ == '__main__':
-	bestOfTheBestMostPopularEpisodes(pd.read_csv('episodes.csv'))
+	compareOverallRating(df1=pd.read_csv('Seinfeld.csv'), df2=pd.read_csv('Game Of Thrones.csv'))
