@@ -12,8 +12,13 @@ import Config
 def getShowIMBDID(show):
 
 	# API parameters
-	credentials = Config.read_credentials()
-	API_KEY  = credentials['imdb']['api_key']
+	if os.environ.get('IMDB_API_KEY'):
+		API_KEY = os.environ.get('IMDB_API_KEY')
+	else:
+		credentials = Config.read_credentials()
+		API_KEY  = credentials['imdb']['api_key']
+
+	# Create the endpoint
 	END_POINT = 'http://www.omdbapi.com/?apikey={}&'.format(API_KEY)
 
 	# Make request
