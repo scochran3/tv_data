@@ -8,6 +8,7 @@ from datetime import datetime
 import pandas as pd
 import time
 import Config
+import os
 
 def getShowIMBDID(show):
 
