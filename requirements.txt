@@ -11,3 +11,4 @@ jsmin==2.2.2
 django_pandas
 pprint
 beautifulsoup4
+wsgiref==0.1.2
