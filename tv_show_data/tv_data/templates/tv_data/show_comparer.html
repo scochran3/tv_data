@@ -1,6 +1,7 @@
 {% extends 'tv_data/base.html' %}
 {% load static %}
 {% load humanize %}
+{% block title %}TV Datatron 3000 - Compare Shows{% endblock %}
 {% block content %}
 
 
@@ -17,7 +18,7 @@
 	<form method="GET" enctype="multipart/form-data">
 	<div class="col-lg-6">
 		<h2>Show #1</h2>
-		<select required name="show1" oninvalid="this.setCustomValidity('You must select a second show')" oninput="setCustomValidity('')">
+		<select required name="show1" oninvalid="this.setCustomValidity('You must select a first show')" oninput="setCustomValidity('')">
   			<option value="">--- Select A Show ---</option>
 			{% for show in shows %}
 			<option value="{{show.title_slugged}}">{{show}}</option>
