@@ -317,6 +317,9 @@ def ratingsVsNumberOfReviews(df):
 		<div class="tooltip-section">
 			<h5 class="tooltip-header">Number of Ratings: </h5><h5 class="tooltip-content">@number_of_ratings</h5>
 		</div>
+		<div class="tooltip-section">
+			<h5 class="tooltip-header">Season: </h5><h5 class="tooltip-content">@season</h5>
+		</div>
 		"""
 
 	p.add_tools(HoverTool(tooltips=tooltips, formatters={'air_date': 'datetime'}))
