@@ -1,0 +1,235 @@
+{% extends 'tv_data/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+
+<div class="row animate-box">
+	<h1>All Shows</h1>
+	<p>Below you will find a list of all of the TV shows that are in our database, in alphabetical order. Don't see the show you are looking for? Not a problem! Just <a href="#search-area">search for it</a> above and it will be automatically added for our database.</p>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">A</h2 >
+		<ul>
+			{% for show in a_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">B</h2 >
+		<ul>
+			{% for show in b_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">C</h2 >
+		<ul>
+			{% for show in a_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">D</h2 >
+		<ul>
+			{% for show in d_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">E</h2 >
+		<ul>
+			{% for show in e_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">F</h2 >
+		<ul>
+			{% for show in f_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">G</h2 >
+		<ul>
+			{% for show in g_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">H</h2 >
+		<ul>
+			{% for show in h_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">I</h2 >
+		<ul>
+			{% for show in i_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">J</h2 >
+		<ul>
+			{% for show in j_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">K</h2 >
+		<ul>
+			{% for show in k_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">L</h2 >
+		<ul>
+			{% for show in l_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">M</h2 >
+		<ul>
+			{% for show in m_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">N</h2 >
+		<ul>
+			{% for show in n_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">O</h2 >
+		<ul>
+			{% for show in o_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">P</h2 >
+		<ul>
+			{% for show in p_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">Q</h2 >
+		<ul>
+			{% for show in q_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">R</h2 >
+		<ul>
+			{% for show in r_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">S</h2 >
+		<ul>
+			{% for show in s_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">T</h2 >
+		<ul>
+			{% for show in t_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">U</h2 >
+		<ul>
+			{% for show in u_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">V</h2 >
+		<ul>
+			{% for show in v_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">W</h2 >
+		<ul>
+			{% for show in w_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">X</h2 >
+		<ul>
+			{% for show in x_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-md-4">
+		<h2 class="alphabet-head">Y</h2 >
+		<ul>
+			{% for show in y_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2 class="alphabet-head">Z</h2 >
+		<ul>
+			{% for show in z_shows %}
+				<li class="show-list-item"><a href="{% url 'view_show' show.title_slugged %}">{{show}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+{% endblock %}

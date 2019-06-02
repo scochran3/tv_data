@@ -1,0 +1,119 @@
+show,episode_title,episode_air_date,episode_rating,episode_number_of_ratings,episode_id,season_number,episode_number
+Lost,Pilot: Part 1,2004-09-22,9.3,8046,tt0636289,1,1
+Lost,Pilot: Part 2,2004-09-29,9.2,6028,tt0636290,1,2
+Lost,Tabula Rasa,2004-10-06,8.6,4718,tt0636294,1,3
+Lost,Walkabout,2004-10-13,9.2,5334,tt0636300,1,4
+Lost,White Rabbit,2004-10-20,8.6,4272,tt0636303,1,5
+Lost,House of the Rising Sun,2004-10-27,8.4,4152,tt0636284,1,6
+Lost,The Moth,2004-11-03,8.6,4174,tt0636298,1,7
+Lost,Confidence Man,2004-11-10,8.8,4262,tt0636275,1,8
+Lost,Solitary,2004-11-17,8.7,3983,tt0636292,1,9
+Lost,Raised by Another,2004-12-01,8.8,4070,tt0636291,1,10
+Lost,All the Best Cowboys Have Daddy Issues,2004-12-08,8.9,4070,tt0636272,1,11
+Lost,Whatever the Case May Be,2005-01-05,8.2,3864,tt0636302,1,12
+Lost,Hearts and Minds,2005-01-12,8.3,3838,tt0636282,1,13
+Lost,Special,2005-01-19,8.3,3732,tt0636293,1,14
+Lost,Homecoming,2005-02-09,8.5,3778,tt0636283,1,15
+Lost,Outlaws,2005-02-16,8.7,3864,tt0636288,1,16
+Lost,...In Translation,2005-02-23,8.6,3756,tt0636268,1,17
+Lost,Numbers,2005-03-02,9.1,4372,tt0636286,1,18
+Lost,Deus Ex Machina,2005-03-30,9.1,4274,tt0636276,1,19
+Lost,Do No Harm,2005-04-06,9.0,4129,tt0636277,1,20
+Lost,The Greater Good,2005-05-04,8.5,3631,tt0636296,1,21
+Lost,Born to Run,2005-05-11,8.3,3693,tt0636273,1,22
+Lost,Exodus: Part 1,2005-05-18,9.2,4372,tt0636279,1,23
+Lost,Exodus: Part 2 (Part I),2005-05-25,9.4,4968,tt0636280,1,24
+Lost,Exodus: Part 2 (Part II),2005-05-25,9.3,1680,tt6222548,1,25
+Lost,"Man of Science, Man of Faith",2005-09-21,9.2,4718,tt0636285,2,26
+Lost,Adrift,2005-09-28,8.5,3581,tt0636271,2,27
+Lost,Orientation,2005-10-05,8.8,3753,tt0636287,2,28
+Lost,Everybody Hates Hugo,2005-10-12,8.5,3608,tt0636278,2,29
+Lost,...And Found,2005-10-19,8.1,3471,tt0636269,2,30
+Lost,Abandoned,2005-11-09,8.5,3485,tt0636270,2,31
+Lost,The Other 48 Days,2005-11-16,8.9,4172,tt0636299,2,32
+Lost,Collision,2005-11-23,8.8,3520,tt0636274,2,33
+Lost,What Kate Did,2005-11-30,8.5,3495,tt0636301,2,34
+Lost,The 23rd Psalm,2006-01-11,8.8,3696,tt0636295,2,35
+Lost,The Hunting Party,2006-01-18,8.6,3414,tt0636297,2,36
+Lost,Fire + Water,2006-01-25,7.4,3469,tt0636281,2,37
+Lost,The Long Con,2006-02-08,8.8,3562,tt0756934,2,38
+Lost,One of Them,2006-02-15,8.8,3444,tt0758090,2,39
+Lost,Maternity Leave,2006-03-01,8.6,3443,tt0764076,2,40
+Lost,The Whole Truth,2006-03-22,8.4,3299,tt0769314,2,41
+Lost,Lockdown,2006-03-29,9.1,3798,tt0771860,2,42
+Lost,Dave,2006-04-05,8.4,3574,tt0784695,2,43
+Lost,S.O.S.,2006-04-12,8.0,3495,tt0771861,2,44
+Lost,Two for the Road,2006-05-03,9.0,3888,tt0782394,2,45
+Lost,?,2006-05-10,8.9,3702,tt0786169,2,46
+Lost,Three Minutes,2006-05-17,8.6,3462,tt0799198,2,47
+Lost,"Live Together, Die Alone",2006-05-24,9.5,5574,tt0793130,2,48
+Lost,A Tale of Two Cities,2006-10-04,8.8,4337,tt0836956,3,49
+Lost,The Glass Ballerina,2006-10-11,8.2,3553,tt0847791,3,50
+Lost,Further Instructions,2006-10-18,8.2,3503,tt0840616,3,51
+Lost,Every Man for Himself,2006-10-25,8.5,3539,tt0850964,3,52
+Lost,The Cost of Living,2006-11-01,8.4,3533,tt0863695,3,53
+Lost,I Do,2006-11-08,8.7,3780,tt0883770,3,54
+Lost,Not in Portland,2007-02-07,8.8,3761,tt0891077,3,55
+Lost,Flashes Before Your Eyes,2007-02-14,9.1,4581,tt0928284,3,56
+Lost,Stranger in a Strange Land,2007-02-21,7.3,3703,tt0954439,3,57
+Lost,Tricia Tanaka Is Dead,2007-02-28,8.4,3783,tt0913743,3,58
+Lost,Enter 77,2007-03-07,8.8,3691,tt0936198,3,59
+Lost,Par Avion,2007-03-14,8.5,3559,tt0959403,3,60
+Lost,The Man from Tallahassee,2007-03-21,9.1,4095,tt0968992,3,61
+Lost,Exposé,2007-03-28,8.2,4388,tt0988050,3,62
+Lost,Left Behind,2007-04-04,8.4,3451,tt0979596,3,63
+Lost,One of Us,2007-04-11,8.8,3614,tt0979597,3,64
+Lost,Catch-22,2007-04-18,8.6,3467,tt0979594,3,65
+Lost,D.O.C.,2007-04-25,8.4,3446,tt0979595,3,66
+Lost,The Brig,2007-05-02,9.1,4040,tt0992243,3,67
+Lost,The Man Behind the Curtain,2007-05-09,9.3,4626,tt0992244,3,68
+Lost,Greatest Hits,2007-05-16,9.2,4659,tt0998660,3,69
+Lost,Through the Looking Glass,2007-05-23,9.7,8760,tt1004798,3,70
+Lost,The Beginning of the End,2008-01-31,8.9,4831,tt0994348,4,71
+Lost,Confirmed Dead,2008-02-07,8.8,3919,tt0994359,4,72
+Lost,The Economist,2008-02-14,8.6,3624,tt0994363,4,73
+Lost,Eggtown,2008-02-21,8.3,3506,tt0994364,4,74
+Lost,The Constant,2008-02-28,9.7,9030,tt0994365,4,75
+Lost,The Other Woman,2008-03-06,8.0,3388,tt0994366,4,76
+Lost,Ji Yeon,2008-03-13,8.5,3479,tt0994367,4,77
+Lost,Meet Kevin Johnson,2008-03-20,8.6,3492,tt0994368,4,78
+Lost,The Shape of Things to Come,2008-04-24,9.1,4133,tt0994369,4,79
+Lost,Something Nice Back Home,2008-05-01,8.2,3308,tt0994349,4,80
+Lost,Cabin Fever,2008-05-08,8.8,3451,tt0994350,4,81
+Lost,There's No Place Like Home: Part 1,2008-05-15,9.0,3798,tt0994351,4,82
+Lost,There's No Place Like Home: Part 2,2008-05-29,9.3,4781,tt0994352,4,83
+Lost,There's No Place Like Home: Part 3,2008-05-29,9.2,2703,tt1952703,4,84
+Lost,Because You Left,2009-01-21,8.8,4147,tt1280267,5,85
+Lost,The Lie,2009-01-21,8.4,3444,tt1313407,5,86
+Lost,Jughead,2009-01-28,8.7,3490,tt1319361,5,87
+Lost,The Little Prince,2009-02-04,8.4,3273,tt1321693,5,88
+Lost,This Place Is Death,2009-02-11,8.8,3435,tt1322105,5,89
+Lost,316,2009-02-18,8.7,3377,tt1340502,5,90
+Lost,The Life and Death of Jeremy Bentham,2009-02-25,8.9,3717,tt1321692,5,91
+Lost,LaFleur,2009-03-04,9.0,3896,tt1341555,5,92
+Lost,Namaste,2009-03-18,8.6,3186,tt1353861,5,93
+Lost,He's Our You,2009-03-25,8.6,3176,tt1358333,5,94
+Lost,"Whatever Happened, Happened",2009-04-01,8.5,3189,tt1363399,5,95
+Lost,Dead Is Dead,2009-04-08,8.9,3405,tt1368702,5,96
+Lost,Some Like It Hoth,2009-04-15,8.4,2937,tt1378943,5,97
+Lost,The Variable,2009-04-29,8.9,3542,tt1378944,5,98
+Lost,Follow the Leader,2009-05-06,8.8,3256,tt1400160,5,99
+Lost,The Incident: Part 1,2009-05-16,9.3,4880,tt1399779,5,100
+Lost,The Incident: Part 2,2009-05-13,9.3,2672,tt2197294,5,101
+Lost,LA X - Part 1,2010-02-02,8.8,4029,tt1453335,6,102
+Lost,LA X - Part 2,2010-02-02,8.7,2139,tt2524344,6,103
+Lost,What Kate Does,2010-02-09,7.9,3375,tt1560343,6,104
+Lost,The Substitute,2010-02-16,8.5,3060,tt1533421,6,105
+Lost,Lighthouse,2010-02-23,8.3,3015,tt1467640,6,106
+Lost,Sundown,2010-03-02,8.3,2931,tt1467641,6,107
+Lost,Dr. Linus,2010-03-09,8.6,3026,tt1467642,6,108
+Lost,Recon,2010-03-16,8.1,3023,tt1467643,6,109
+Lost,Ab Aeterno,2010-03-23,9.3,4994,tt1467644,6,110
+Lost,The Package,2010-03-30,8.1,2961,tt1467629,6,111
+Lost,Happily Ever After,2010-04-06,8.9,3670,tt1467630,6,112
+Lost,Everybody Loves Hugo,2010-04-13,8.6,3059,tt1467631,6,113
+Lost,The Last Recruit,2010-04-20,8.4,3017,tt1603637,6,114
+Lost,The Candidate,2010-05-04,9.0,3892,tt1467632,6,115
+Lost,Across the Sea,2010-05-11,8.3,4062,tt1467633,6,116
+Lost,What They Died For,2010-05-18,8.8,3488,tt1467634,6,117
+Lost,The End,2010-05-23,8.2,8665,tt1467635,6,118

@@ -1,0 +1,118 @@
+{% extends 'tv_data/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+<link
+    href="{% static 'bokeh/bokeh-0.13.0.min.css' %}"
+    rel="stylesheet" type="text/css">
+<link
+    href="{% static 'bokeh/bokeh-widgets-0.12.13.min.css' %}"
+    rel="stylesheet" type="text/css">
+<link
+    href="{% static 'bokeh/bokeh-tables-0.13.0.min.css' %}"
+    rel="stylesheet" type="text/css">
+
+<script src="{% static 'bokeh/bokeh-0.13.0.min.js' %}"></script>
+<script src="{% static 'bokeh/bokeh-widgets-0.13.0.min.js' %}"></script>
+<script src="{% static 'bokeh/bokeh-tables-0.13.0.min.js' %}"></script>
+
+
+<div class="row animate-box">
+	<div class='col-lg-12'>
+		<h6 class="breadcrumb-trail"><a href="#">Home</a> > <a href="{% url 'all_shows' %}">All Shows</a> > {{this_show.title}}</h6>
+	<div class="col-lg-offset-2 col-lg-4 col-xs-12">
+		<div class="desc">
+			<div class="poster-image-section">
+				<img class="poster-image" src="{{this_show.poster_url}}" />
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 col-xs-12">
+		<h1>{{this_show.title}}</h1>
+		<p class='show-summary-data'><strong>Premiered:</strong> {{this_show.released}}</p>
+		<p class='show-summary-data'><strong>Rated:</strong> {{this_show.rated}}</p>
+		<p class='show-summary-data'><strong>Number of Seasons:</strong> {{numberOfSeasons}}</p>
+		<p class='show-summary-data'><strong>Number of Episodes:</strong> {{numberOfEpisodes}}</p>
+		<p class='show-summary-data'><strong>Average Episode Rating (/10):</strong> {{episodeRatingsOverTime.2}}</p>
+		<a href="https://www.imdb.com/title/{{this_show.imdb_id}}" target="_blank"><p><strong>Check out the shows IMDB page</strong></p></a>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-lg-12 chart-section">
+		<h2 class="chart-header">How long will it take to watch {{this_show.title}}?</h2>
+		<h3 id="length-of-show-stat">{{this_show.title}} has a total of <span id="highlight-text">{{numberOfEpisodes}} episodes</span> stretching over <span id="highlight-text">{{numberOfSeasons}} seasons</span>. Given that the average episode length is <span id="highlight-text">{{this_show.runtime}} minutes</span>, it means that this is a total of <span id="highlight-text">{{lengthOfShowMinutes|intcomma}} minutes</span> of content! Thus to completely binge the show you will need to invest <span id="highlight-text">{{lengthOfShowHours}} hours</span> or <span id="highlight-text">{{lengthOfShowDays}} days</span> of your time!</h3>
+	</div>
+</div>
+<div class="row animate-box">
+	<div class="col-lg-4 col-xs-12 chart-section">
+		<h2 class="chart-header">Ratings Over Time</h2>
+		<p>This chart shows how each episode of {{this_show.title}} was rated on IMDB, which uses a 1 to 10 scale. Over the course of {{episodeRatingsOverTime.7}} episodes, the average score per episode is {{episodeRatingsOverTime.2}} with the highest rated episode getting a score of {{episodeRatingsOverTime.3}} (Episode: {{episodeRatingsOverTime.4}}) and the lowest rated episode getting a score of {{episodeRatingsOverTime.5}} (Episode: {{episodeRatingsOverTime.6}}).</p>
+	</div>
+	<div class="col-lg-8 col-xs-12 chart-section">
+		{{episodeRatingsOverTime.0|safe}}
+		{{episodeRatingsOverTime.1|safe}}
+	</div>
+</div>
+<div class="row animate-box chart-section">
+	<div class="col-lg-8 col-xs-12">
+		{{episodeRatingsHistogram.0|safe}}
+		{{episodeRatingsHistogram.1|safe}}
+	</div>
+	<div class="col-lg-4 col-xs-12">
+		<h2 class="chart-header">Spread of Scores</h2>
+		<p>The histogram shows the spread of ratings for episodes of {{this_show.title}}. That is, each bar represents the number of episodes that got that rating.</p>
+	</div>
+</div>
+<div class="row animate-box chart-section">
+	<div class="col-lg-3 col-xs-12">
+		<h2 class="chart-header">Ratings Per Episode</h2>
+		<p>The chart below shows how many ratings each episode of {{this_show.title}} received on IMDB. The episode with the most ratings was "{{numberOfRatingsOverTime.2}}" ({{numberOfRatingsOverTime.3|intcomma}} ratings) and the episode with the least ratings was "{{numberOfRatingsOverTime.4}}" ({{numberOfRatingsOverTime.5|intcomma}} ratings). On average, each episode of {{this_show.title}} gets {{numberOfRatingsOverTime.6|intcomma}} users rating it.</p>
+	</div>
+	<div class="col-lg-9 col-xs-12">
+		{{numberOfRatingsOverTime.0|safe}}
+		{{numberOfRatingsOverTime.1|safe}}
+	</div>
+</div>
+<div class="row animate-box chart-section">
+	<div class="col-lg-9 col-xs-12">
+		{{ratingsVsNumberOfReviews.0|safe}}
+		{{ratingsVsNumberOfReviews.1|safe}}
+	</div>
+	<div class="col-lg-3 col-xs-12">
+		<h2 class="chart-header">Ratings vs. Number of Ratings</h2>
+		<p>The scatterplot shows episode ratings vs. the number of ratings the episode received. Sometimes we see as shows get more popular (more ratings) their episode rating declines, while some shows seem to get better as they got more popular. </p>
+	</div>
+</div>
+<div class="row animate-box chart-section">
+	<div class="col-lg-4 col-xs-12">
+		<h2 class="chart-header">Ratings Per Season</h2>
+		<p>The chart below shows how ratings for {{this_show.title}} varied by season. Overall the season with the best rating was Season {{ratingPerSeason.3}} with a rating of {{ratingPerSeason.4}}. The season with the lowest rating was Season {{ratingPerSeason.5}} with a rating of {{ratingPerSeason.6}}. The average season got a overall rating of {{ratingPerSeason.2}}
+	</div>
+	<div class="col-lg-8 col-xs-12">
+		{{ratingPerSeason.0|safe}}
+		{{ratingPerSeason.1|safe}}
+	</div>
+</div>
+<div class="row animate-box chart-section">
+	<div class="col-lg-9 col-xs-12">
+		{{highestLowestRatedEpisodes.0|safe}}
+		{{highestLowestRatedEpisodes.1|safe}}
+	</div>
+	<div class="col-lg-3 col-xs-12">
+		<h2 class="chart-header">Best Rated Episodes</h2>
+		<p>What do you think is the best episode ever of {{this_show.title}}? The chart to the right shows the five highest rated episodes ever of {{this_show.title}}. According to the fans the best episode of {{this_show.title}} was "{{episodeRatingsOverTime.4}}" with a score of {{episodeRatingsOverTime.3}}. Note that the average score for an episode of {{this_show.title}} is {{episodeRatingsOverTime.2}}.</p>
+	</div>
+</div>
+<div class="row animate-box chart-section">
+	<div class="col-lg-3 col-xs-12">
+		<h2 class="chart-header">Worst Rated Episodes</h2>
+		<p>Of course, every episode cannot be legendary. This chart shows what fans rate as the five worst episodes in the history of {{this_show.title}}. They rate "{{episodeRatingsOverTime.6}}" as the worst episode ever with a score of {{episodeRatingsOverTime.5}}.</p>
+	</div>
+	<div class="col-lg-9 col-xs-12">
+		{{highestLowestRatedEpisodes.2|safe}}
+		{{highestLowestRatedEpisodes.3|safe}}
+	</div>
+</div>
+
+{% endblock %}

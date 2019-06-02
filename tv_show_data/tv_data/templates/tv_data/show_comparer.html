@@ -1,0 +1,48 @@
+{% extends 'tv_data/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+
+<div class="row animate-box">
+	<div class="col-lg-12">
+		<h1>Season Comparer</h1>
+		<p>Which was worse: the last season of Game Of Thrones or the last season of Lost? Debate with your friends what the best TV show ever is? Enter our show comparer! Pick the shows you'd like to compare and then we will break it down.</p>
+	</div>
+</div>
+<div class="row animate-box separate-section">
+	<form method="GET" enctype="multipart/form-data">
+	<div class="col-lg-6">
+		<h2>Show #1</h2>
+		<select name="show1">
+			{% for show in shows %}
+			<option value="{{show.title_slugged}}">{{show}}</option>
+			{% endfor %}
+		</select>
+	</div>
+	<div class="col-lg-6">
+		<h2>Show #2</h2>
+		<select name="show2">
+			{% for show in shows %}
+			<option value="{{show.title_slugged}}">{{show}}</option>
+			{% endfor %}
+		</select>
+	</div>
+	<div class="col-lg-12">
+		<button type="submit" class="btn-primary">Select Shows</button>
+		{% if request.session.shows_match %}
+			<h3 class='show-not-found-error-message'>{{ request.session.shows_match }}
+		{% endif %}
+	</div>
+	</form>
+</div>
+<div class="row animate-box">
+	<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+		<div class='col-lg-12 separate-section'>
+			<h3 class='clarifying-note'>If you don't see the show you want add it below.</h3>
+			<input required name='show_title' type="text" id="show_title" placeholder="Enter show title"  oninvalid="this.setCustomValidity('You must supply a show to proceed')" oninput="setCustomValidity('')">
+			<button type="submit" name="add-show" class="btn-primary custom-submit">Add Show</button>
+		</div>
+	</form>	
+</div>
+{% endblock %}
