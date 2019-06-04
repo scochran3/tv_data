@@ -6,7 +6,7 @@ pandas==0.23.4
 configparser
 psycopg2==2.8.2
 boto3==1.9.78
-bokeh==1.0.4
+bokeh==1.2.0
 jsmin==2.2.2
 django_pandas
 pprint
