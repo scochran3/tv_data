@@ -231,8 +231,6 @@ def show_comparer_shows(request, show1, show2):
 	show2_df = read_frame(show2_episodes)
 	show2_df = show2_df.sort_values(by='episode_number', ascending=False)
 
-	show2_df.to_csv('delete.csv')
-
 	# Create comparison charts
 	compareSeasons = createIMDBVisualizations.compareSeasons(show1_df, show2_df)
 	numberOfEpisodes = createIMDBVisualizations.compareNumberOfEpisodes(show1_df, show2_df)
@@ -301,11 +299,13 @@ def best_of_the_best(request):
 	bestOfTheBestTopSeasons = createIMDBVisualizations.bestOfTheBestTopSeasons(episodes_df)
 	bestOfTheBestTopEpisodes = createIMDBVisualizations.bestOfTheBestTopEpisodes(episodes_df)
 	bestOfTheBestMostPopularEpisodes = createIMDBVisualizations.bestOfTheBestMostPopularEpisodes(episodes_df)
+	bestOfTheBestRatingsOverTime = createIMDBVisualizations.bestOfTheBestRatingsOverTime(episodes_df)
 
 	context = {'bestOfTheBestTopShows': bestOfTheBestTopShows,
 				'bestOfTheBestTopSeasons': bestOfTheBestTopSeasons,
 				'bestOfTheBestTopEpisodes': bestOfTheBestTopEpisodes,
-				'bestOfTheBestMostPopularEpisodes': bestOfTheBestMostPopularEpisodes}
+				'bestOfTheBestMostPopularEpisodes': bestOfTheBestMostPopularEpisodes,
+				'bestOfTheBestRatingsOverTime': bestOfTheBestRatingsOverTime}
 
 	return render(request, 'tv_data/best_of_the_best.html', context)
 

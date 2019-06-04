@@ -1,264 +1,63 @@
 ,id,show,episode_title,air_date,rating,number_of_ratings,episode_number,season,imdb_episode_id
-0,4928,Frasier,"Goodnight, Seattle",2004-05-13,9.30,732,263,11,tt0756480
-1,4927,Frasier,"Goodnight, Seattle",2004-05-13,9.00,556,262,11,tt0582417
-2,4926,Frasier,Crock Tales,2004-05-04,7.90,351,261,11,tt0582369
-3,4925,Frasier,Detour,2004-04-27,8.00,355,260,11,tt0582381
-4,4924,Frasier,And Frasier Makes Three,2004-04-20,8.50,379,259,11,tt0582341
-5,4923,Frasier,Miss Right Now,2004-04-06,8.30,369,258,11,tt0582454
-6,4922,Frasier,Match Game,2004-03-30,7.80,333,257,11,tt0582451
-7,4921,Frasier,Coots and Ladders,2004-03-16,7.40,338,256,11,tt0582365
-8,4920,Frasier,Boo!,2004-03-02,8.70,428,255,11,tt0582354
-9,4919,Frasier,Caught in the Act,2004-02-24,8.50,469,254,11,tt0582361
-10,4918,Frasier,Freudian Sleep,2004-02-03,7.10,400,253,11,tt0582413
-11,4917,Frasier,The Ann Who Came to Dinner,2004-01-13,7.20,328,252,11,tt0582515
-12,4916,Frasier,Frasier-Lite,2004-01-06,7.50,338,251,11,tt0582411
-13,4915,Frasier,High Holidays,2003-12-09,8.90,494,250,11,tt0582425
-14,4914,Frasier,Sea Bee Jeebies,2003-12-02,7.70,328,249,11,tt0582489
-15,4913,Frasier,Guns 'N Neuroses,2003-11-18,8.50,394,248,11,tt0582419
-16,4912,Frasier,Murder Most Maris,2003-11-11,8.80,406,247,11,tt0582463
-17,4911,Frasier,Maris Returns,2003-11-04,8.80,444,246,11,tt0582448
-18,4910,Frasier,I'm Listening,2003-10-28,8.30,353,245,11,tt0582432
-19,4909,Frasier,The Placeholder,2003-10-14,7.60,331,244,11,tt0582546
-20,4908,Frasier,The Babysitter,2003-10-07,7.90,331,243,11,tt0582517
-21,4907,Frasier,The Doctor Is Out,2003-09-30,9.30,737,242,11,tt0582524
-22,4906,Frasier,"A Man, a Plan and a Gal: Julia",2003-09-23,8.20,376,241,11,tt0582329
-23,4905,Frasier,"No Sex Please, We're Skittish",2003-09-23,8.10,357,240,11,tt0582466
-24,4904,Frasier,A New Position for Roz,2003-05-20,7.70,322,239,10,tt0582331
-25,4903,Frasier,Analyzed Kiss,2003-05-13,7.50,304,238,10,tt0582340
-26,4902,Frasier,Fathers and Sons,2003-05-06,8.80,442,237,10,tt0582395
-27,4901,Frasier,The Devil & Dr. Phil,2003-04-29,7.30,329,236,10,tt0582523
-28,4900,Frasier,"Farewell, Nervosa",2003-04-22,7.60,339,235,10,tt0582393
-29,4899,Frasier,Some Assembly Required,2003-04-01,7.20,318,234,10,tt0582502
-30,4898,Frasier,Roe to Perdition,2003-03-18,8.60,412,233,10,tt0582480
-31,4897,Frasier,Kenny on the Couch,2003-03-04,7.20,314,232,10,tt0582438
-32,4896,Frasier,Fraternal Schwinns,2003-02-25,8.00,346,231,10,tt0582412
-33,4895,Frasier,Trophy Girlfriend,2003-02-18,8.00,373,230,10,tt0582574
-34,4894,Frasier,Daphne Does Dinner,2003-02-11,8.70,454,229,10,tt0582371
-35,4893,Frasier,Lilith Needs a Favor,2003-02-04,7.70,331,228,10,tt0582444
-36,4892,Frasier,The Harassed,2003-01-14,7.40,322,227,10,tt0582534
-37,4891,Frasier,Door Jam,2003-01-07,8.40,418,226,10,tt0582388
-38,4890,Frasier,We Two Kings,2002-12-10,7.60,318,225,10,tt0582578
-39,4889,Frasier,Don't Go Breaking My Heart,2002-11-26,7.80,304,224,10,tt0582387
-40,4888,Frasier,Rooms with a View,2002-11-19,8.60,525,223,10,tt0582483
-41,4887,Frasier,Bristle While You Work,2002-11-12,7.50,318,222,10,tt0582356
-42,4886,Frasier,Star Mitzvah,2002-11-05,8.60,458,221,10,tt0582508
-43,4885,Frasier,Tales from the Crypt,2002-10-29,7.80,352,220,10,tt0582511
-44,4884,Frasier,Kissing Cousin,2002-10-15,7.40,370,219,10,tt0582440
-45,4883,Frasier,Proxy Prexy,2002-10-08,7.70,329,218,10,tt0582475
-46,4882,Frasier,Enemy at the Gate,2002-10-01,8.00,379,217,10,tt0582391
-47,4881,Frasier,The Ring Cycle,2002-09-24,8.10,347,216,10,tt0582549
-48,4880,Frasier,Moons Over Seattle,2002-05-21,7.70,328,215,9,tt0582458
-49,4879,Frasier,The Guilt Trippers,2002-05-14,7.80,314,214,9,tt0582533
-50,4878,Frasier,Frasier Has Spokane,2002-05-07,7.50,307,213,9,tt0582406
-51,4877,Frasier,Cheerful Goodbyes,2002-04-30,7.90,389,212,9,tt0582362
-52,4876,Frasier,The Love You Fake,2002-04-09,8.00,332,211,9,tt0582541
-53,4875,Frasier,Deathtrap,2002-04-02,7.90,354,210,9,tt0582378
-54,4874,Frasier,War of the Words,2002-03-12,7.30,370,209,9,tt0582577
-55,4873,Frasier,Three Blind Dates,2002-03-05,7.70,338,208,9,tt0582565
-56,4872,Frasier,Wheels of Fortune,2002-02-26,8.10,437,207,9,tt0582579
-57,4871,Frasier,The Proposal,2002-02-05,8.30,376,206,9,tt0582547
-58,4870,Frasier,Juvenilia,2002-01-22,7.70,346,205,9,tt0582437
-59,4869,Frasier,Mother Load: Part 2,2002-01-15,7.20,328,204,9,tt0582461
-60,4868,Frasier,Mother Load: Part 1,2002-01-08,7.30,320,203,9,tt0582460
-61,4867,Frasier,Bully for Martin,2001-12-11,7.50,329,202,9,tt0582357
-62,4866,Frasier,Junior Agent,2001-11-27,7.30,324,201,9,tt0582436
-63,4865,Frasier,Sharing Kirby,2001-11-20,7.40,308,200,9,tt0582494
-64,4864,Frasier,The Two Hundredth,2001-11-13,7.70,340,199,9,tt0582558
-65,4863,Frasier,Bla-Z-Boy,2001-11-06,8.60,431,198,9,tt0582353
-66,4862,Frasier,Room Full of Heroes,2001-10-30,8.30,399,197,9,tt0582481
-67,4861,Frasier,Love Stinks,2001-10-16,7.80,323,196,9,tt0582447
-68,4860,Frasier,The Return of Martin Crane,2001-10-09,8.40,367,195,9,tt0582548
-69,4859,Frasier,The First Temptation of Daphne,2001-10-02,7.80,339,194,9,tt0582527
-70,4858,Frasier,Don Juan in Hell: Part 2,2001-09-25,8.30,412,193,9,tt0582386
-71,4857,Frasier,Don Juan in Hell: Part 1,2001-09-25,7.60,339,192,9,tt0582385
-72,4856,Frasier,Cranes Go Caribbean,2001-05-22,7.80,320,191,8,tt0582367
-73,4855,Frasier,A Day in May,2001-05-22,7.50,343,190,8,tt0582327
-74,4854,Frasier,A Passing Fancy,2001-05-15,7.80,314,189,8,tt0582332
-75,4853,Frasier,Semi-Decent Proposal,2001-05-15,7.50,315,188,8,tt0582493
-76,4852,Frasier,The Wizard and Roz,2001-05-08,7.70,333,187,8,tt0582562
-77,4851,Frasier,Daphne Returns,2001-05-01,8.70,441,186,8,tt0582373
-78,4850,Frasier,Forgotten But Not Gone,2001-04-17,7.60,322,185,8,tt0582400
-79,4849,Frasier,It Takes Two to Tangle,2001-03-27,7.40,314,184,8,tt0582434
-80,4848,Frasier,Docu.Drama,2001-03-06,7.60,322,183,8,tt0582384
-81,4847,Frasier,Hooping Cranes,2001-02-27,8.60,416,182,8,tt0582426
-82,4846,Frasier,Hungry Heart,2001-02-20,8.60,416,181,8,tt0582430
-83,4845,Frasier,Sliding Frasiers,2001-02-13,8.00,360,180,8,tt0582500
-84,4844,Frasier,The Show Must Go Off,2001-02-06,8.60,484,179,8,tt0582551
-85,4843,Frasier,Motor Skills,2001-01-30,7.70,373,178,8,tt0582462
-86,4842,Frasier,Cranes Unplugged,2001-01-16,7.40,330,177,8,tt0582368
-87,4841,Frasier,Frasier's Edge,2001-01-09,8.10,390,176,8,tt0582409
-88,4840,Frasier,Mary Christmas,2000-12-12,7.10,359,175,8,tt0582450
-89,4839,Frasier,The New Friend,2000-12-05,7.70,323,174,8,tt0582544
-90,4838,Frasier,Legal Tender Love and Care,2000-11-28,7.50,334,173,8,tt0582442
-91,4837,Frasier,Taking Liberties,2000-11-21,8.80,479,172,8,tt0582510
-92,4836,Frasier,The Great Crane Robbery,2000-11-14,7.50,339,171,8,tt0582532
-93,4835,Frasier,The Bad Son,2000-10-31,7.60,340,170,8,tt0582518
-94,4834,Frasier,And the Dish Ran Away with the Spoon: Part 2,2000-10-24,8.70,423,169,8,tt0582343
-95,4833,Frasier,And the Dish Ran Away with the Spoon: Part 1,2000-10-24,8.40,387,168,8,tt0582342
-96,4832,Frasier,"Something Borrowed, Someone Blue: Part 2",2000-05-18,9.30,548,167,7,tt0582506
-97,4831,Frasier,"Something Borrowed, Someone Blue: Part 1",2000-05-18,8.90,487,166,7,tt0582505
-98,4830,Frasier,Dark Side of the Moon,2000-05-11,8.80,455,165,7,tt0582374
-99,4829,Frasier,The Three Faces of Frasier,2000-05-04,7.70,350,164,7,tt0582557
-100,4828,Frasier,To Thine Old Self Be True,2000-04-27,8.60,421,163,7,tt0582572
-101,4827,Frasier,Morning Becomes Entertainment,2000-04-06,7.70,341,162,7,tt0582459
-102,4826,Frasier,Hot Pursuit,2000-03-23,7.80,335,161,7,tt0582427
-103,4825,Frasier,Whine Club,2000-02-24,7.90,353,160,7,tt0582583
-104,4824,Frasier,Something About Dr. Mary,2000-02-17,7.70,374,159,7,tt0582504
-105,4823,Frasier,Out with Dad,2000-02-10,9.20,645,158,7,tt0582471
-106,4822,Frasier,Big Crane on Campus,2000-02-03,7.70,365,157,7,tt0582352
-107,4821,Frasier,They're Playing Our Song,2000-01-13,8.30,427,156,7,tt0582564
-108,4820,Frasier,RDWRER,2000-01-06,8.50,457,155,7,tt0582476
-109,4819,Frasier,The Fight Before Christmas,1999-12-16,8.60,413,154,7,tt0582526
-110,4818,Frasier,Back Talk,1999-12-09,9.00,469,153,7,tt0582348
-111,4817,Frasier,The Apparent Trap,1999-11-18,8.00,358,152,7,tt0582516
-112,4816,Frasier,The Late Dr. Crane,1999-11-18,8.10,354,151,7,tt0582539
-113,4815,Frasier,A Tsar Is Born,1999-11-11,8.70,452,150,7,tt0582333
-114,4814,Frasier,Rivals,1999-11-04,7.70,365,149,7,tt0582479
-115,4813,Frasier,The Dog That Rocks the Cradle,1999-10-21,7.70,344,148,7,tt0582525
-116,4812,Frasier,Everyone's a Critic,1999-10-14,7.70,351,147,7,tt0582392
-117,4811,Frasier,Radio Wars,1999-10-07,8.10,408,146,7,tt0582477
-118,4810,Frasier,Father of the Bride,1999-09-30,7.70,346,145,7,tt0582394
-119,4809,Frasier,Momma Mia,1999-09-23,8.30,425,144,7,tt0582456
-120,4808,Frasier,Shutout in Seattle: Part 2,1999-05-20,8.70,419,143,6,tt0582498
-121,4807,Frasier,Shutout in Seattle: Part 1,1999-05-20,8.30,390,142,6,tt0582497
-122,4806,Frasier,Visions of Daphne,1999-05-13,8.60,423,141,6,tt0582575
-123,4805,Frasier,When a Man Loves Two Women,1999-05-05,8.10,375,140,6,tt0582580
-124,4804,Frasier,Dr. Nora,1999-04-29,8.30,475,139,6,tt0582389
-125,4803,Frasier,IQ,1999-04-08,8.30,398,138,6,tt0582433
-126,4802,Frasier,Taps at the Montana,1999-03-25,8.10,369,137,6,tt0582512
-127,4801,Frasier,The Dinner Party,1999-03-11,8.50,442,136,6,tt0756479
-128,4800,Frasier,Decoys,1999-02-25,8.70,444,135,6,tt0582379
-129,4799,Frasier,To Tell the Truth,1999-02-18,8.50,422,134,6,tt0582571
-130,4798,Frasier,Three Valentines,1999-02-11,9.10,686,133,6,tt0582569
-131,4797,Frasier,The Show Where Woody Shows Up,1999-02-04,7.30,390,132,6,tt0582555
-132,4796,Frasier,"Our Parents, Ourselves",1999-01-21,7.60,368,131,6,tt0582470
-133,4795,Frasier,Good Samaritan,1999-01-07,7.90,382,130,6,tt0582416
-134,4794,Frasier,"Merry Christmas, Mrs. Moskowitz",1998-12-17,8.90,566,129,6,tt0582452
-135,4793,Frasier,"Roz, a Loan",1998-12-10,7.60,345,128,6,tt0582488
-136,4792,Frasier,The Seal Who Came to Dinner,1998-11-19,8.50,471,127,6,tt0582550
-137,4791,Frasier,How to Bury a Millionaire,1998-11-12,8.40,418,126,6,tt0582429
-138,4790,Frasier,Secret Admirer,1998-11-05,7.90,361,125,6,tt0582491
-139,4789,Frasier,First Do No Harm,1998-10-29,7.40,370,124,6,tt0582397
-140,4788,Frasier,Hot Ticket,1998-10-16,7.60,384,123,6,tt0582428
-141,4787,Frasier,Dial M for Martin,1998-10-08,8.80,510,122,6,tt0582382
-142,4786,Frasier,Frasier's Curse,1998-10-01,7.70,374,121,6,tt0582408
-143,4785,Frasier,Good Grief,1998-09-24,7.80,396,120,6,tt0582415
-144,4784,Frasier,Sweet Dreams,1998-05-19,7.90,353,119,5,tt0582509
-145,4783,Frasier,"Party, Party",1998-05-19,7.80,358,118,5,tt0582472
-146,4782,Frasier,The Life of the Party,1998-05-12,8.50,439,117,5,tt0582540
-147,4781,Frasier,Roz and the Schnoz,1998-05-05,8.70,542,116,5,tt0582484
-148,4780,Frasier,First Date,1998-04-28,8.90,483,115,5,tt0582396
-149,4779,Frasier,Frasier Gotta Have It,1998-04-21,7.50,385,114,5,tt0582404
-150,4778,Frasier,Bad Dog,1998-04-07,7.80,377,113,5,tt0582349
-215,4777,Frasier,The Perfect Guy,1998-03-24,8.30,456,112,5,tt0582545
-216,4776,Frasier,Beware of Greeks,1998-03-17,7.60,433,111,5,tt0582351
-217,4775,Frasier,Room Service,1998-03-03,9.00,593,110,5,tt0582482
-218,4774,Frasier,The Ski Lodge,1998-02-24,9.60,1056,109,5,tt0582556
-219,4773,Frasier,The Maris Counselor,1998-02-03,8.30,431,108,5,tt0582542
-220,4772,Frasier,The Zoo Story,1998-01-20,8.00,381,107,5,tt0582563
-151,4771,Frasier,Ain't Nobody's Business If I Do,1998-01-13,7.70,358,106,5,tt0582338
-152,4770,Frasier,Where Every Bloke Knows Your Name,1998-01-06,7.80,384,105,5,tt0582581
-153,4769,Frasier,Perspectives on Christmas,1997-12-16,8.80,489,104,5,tt0582473
-154,4768,Frasier,Desperately Seeking Closure,1997-12-09,7.40,358,103,5,tt0582380
-155,4767,Frasier,My Fair Frasier,1997-11-25,8.00,386,102,5,tt0582465
-156,4766,Frasier,Voyage of the Damned,1997-11-18,8.30,452,101,5,tt0582576
-157,4765,Frasier,The 1000th Show,1997-11-11,7.90,397,100,5,tt0582513
-158,4764,Frasier,The Kid,1997-11-04,8.10,406,99,5,tt0582537
-159,4763,Frasier,Halloween,1997-10-28,9.20,649,98,5,tt0582420
-160,4762,Frasier,The Gift Horse,1997-09-30,8.70,460,97,5,tt0582530
-161,4761,Frasier,Frasier's Imaginary Friend,1997-09-23,8.90,540,96,5,tt0582410
-162,4760,Frasier,Odd Man Out,1997-05-27,8.00,395,95,4,tt0582467
-163,4759,Frasier,Ask Me No Questions,1997-05-20,7.60,373,94,4,tt0582346
-164,4758,Frasier,Are You Being Served?,1997-05-13,8.70,474,93,4,tt0582345
-165,4757,Frasier,Daphne Hates Sherry,1997-05-06,8.80,476,92,4,tt0582372
-166,4756,Frasier,Three Dates and a Breakup,1997-04-29,8.50,476,91,4,tt0582566
-167,4755,Frasier,Ham Radio,1997-04-22,9.50,1039,90,4,tt0582421
-168,4754,Frasier,Roz's Turn,1997-04-15,7.90,388,89,4,tt0582487
-169,4753,Frasier,The Unnatural,1997-04-01,7.80,379,88,4,tt0582561
-170,4752,Frasier,Roz's Krantz & Gouldenstein Are Dead,1997-03-11,8.40,453,87,4,tt0582486
-171,4751,Frasier,To Kill a Talking Bird,1997-02-25,8.70,529,86,4,tt0582570
-172,4750,Frasier,Four for the Seesaw,1997-02-18,8.50,470,85,4,tt0582402
-173,4749,Frasier,Death and the Dog,1997-02-11,8.50,480,84,4,tt0582377
-174,4748,Frasier,Three Days of the Condo,1997-01-21,8.10,399,83,4,tt0582568
-175,4747,Frasier,Liar! Liar!,1997-01-14,7.60,384,82,4,tt0582443
-176,4746,Frasier,"Dad Loves Sherry, the Boys Just Whine",1997-01-07,8.10,406,81,4,tt0582370
-177,4745,Frasier,Our Father Whose Art Ain't Heaven,1996-12-09,7.90,426,80,4,tt0582469
-178,4744,Frasier,A Lilith Thanksgiving,1996-11-26,8.50,500,79,4,tt0582328
-179,4743,Frasier,Mixed Doubles,1996-11-19,9.00,575,78,4,tt0582455
-180,4742,Frasier,Head Game,1996-11-12,8.50,474,77,4,tt0582422
-181,4741,Frasier,A Crane's Critique,1996-10-22,8.10,417,76,4,tt0582326
-182,4740,Frasier,The Impossible Dream,1996-10-15,8.40,489,75,4,tt0582535
-183,4739,Frasier,Love Bites Dog,1996-09-24,8.10,425,74,4,tt0582446
-184,4738,Frasier,The Two Mrs. Cranes,1996-09-17,9.20,770,73,4,tt0582559
-185,4737,Frasier,You Can Go Home Again,1996-05-21,8.50,453,72,3,tt0582584
-186,4736,Frasier,The Focus Group,1996-05-14,8.10,430,71,3,tt0582528
-187,4735,Frasier,Frasier Loves Roz,1996-05-07,7.90,401,70,3,tt0582407
-188,4734,Frasier,"Where There's Smoke, There's Fired",1996-04-30,8.10,466,69,3,tt0582582
-189,4733,Frasier,Police Story,1996-04-23,7.80,392,68,3,tt0582474
-190,4732,Frasier,Crane vs. Crane,1996-04-09,7.90,418,67,3,tt0582366
-191,4731,Frasier,Chess Pains,1996-03-26,8.50,481,66,3,tt0582363
-192,4730,Frasier,High Crane Drifter,1996-03-12,8.80,516,65,3,tt0582424
-193,4729,Frasier,Look Before You Leap,1996-02-27,8.50,501,64,3,tt0582445
-194,4728,Frasier,A Word to the Wiseguy,1996-02-20,8.10,444,63,3,tt0582334
-195,4727,Frasier,The Show Where Diane Comes Back,1996-02-13,8.00,472,62,3,tt0582552
-196,4726,Frasier,Moon Dance,1996-02-06,9.20,740,61,3,tt0582457
-197,4725,Frasier,Come Lie with Me,1996-01-30,7.80,408,60,3,tt0582364
-198,4724,Frasier,The Friend,1996-01-16,7.30,435,59,3,tt0582529
-199,4723,Frasier,It's Hard to Say Goodbye If You Won't Leave,1996-01-09,7.60,401,58,3,tt0582435
-200,4722,Frasier,Frasier Grinch,1995-12-19,8.10,458,57,3,tt0582405
-201,4721,Frasier,The Last Time I Saw Maris,1995-11-28,8.50,456,56,3,tt0582538
-202,4720,Frasier,The Adventures of Bad Boy and Dirty Girl,1995-11-21,8.70,521,55,3,tt0582514
-203,4719,Frasier,Sleeping with the Enemy,1995-11-14,8.30,449,54,3,tt0582499
-204,4718,Frasier,Kisses Sweeter Than Wine,1995-11-07,8.10,412,53,3,tt0582439
-205,4717,Frasier,Leapin' Lizards,1995-10-31,7.70,419,52,3,tt0582441
-206,4716,Frasier,Martin Does It His Way,1995-10-10,8.00,460,51,3,tt0582449
-207,4715,Frasier,Shrink Rap,1995-09-26,8.10,436,50,3,tt0582496
-208,4714,Frasier,She's the Boss,1995-09-19,8.30,515,49,3,tt0582495
-209,4713,Frasier,Dark Victory,1995-05-23,8.50,491,48,2,tt0582375
-210,4712,Frasier,The Innkeepers,1995-05-16,9.10,709,47,2,tt0582536
-211,4711,Frasier,Agents in America: Part 3,1995-05-09,8.60,507,46,2,tt0582337
-212,4710,Frasier,An Affair to Forget,1995-05-02,9.00,623,45,2,tt0582339
-213,4709,Frasier,Breaking the Ice,1995-04-18,8.50,494,44,2,tt0582355
-214,4708,Frasier,Someone to Watch Over Me,1995-03-28,8.30,455,43,2,tt0582503
-221,4707,Frasier,The Club,1995-03-21,8.20,448,42,2,tt0582521
-222,4706,Frasier,Daphne's Room,1995-02-28,9.00,605,41,2,tt0756478
-223,4705,Frasier,The Show Where Sam Shows Up,1995-02-21,8.10,500,40,2,tt0582554
-224,4704,Frasier,You Scratch My Book...,1995-02-14,8.00,458,39,2,tt0582586
-225,4703,Frasier,"Fool Me Once, Shame on You, Fool Me Twice...",1995-02-07,7.90,429,38,2,tt0582399
-226,4702,Frasier,Retirement Is Murder,1995-01-10,8.50,490,37,2,tt0582478
-227,4701,Frasier,Roz in the Doghouse,1995-01-03,8.00,432,36,2,tt0582485
-228,4700,Frasier,Seat of Power,1994-12-13,8.50,528,35,2,tt0582490
-229,4699,Frasier,Burying a Grudge,1994-11-29,7.60,436,34,2,tt0582358
-230,4698,Frasier,Adventures in Paradise: Part 2,1994-11-22,8.30,500,33,2,tt0582336
-231,4697,Frasier,Adventures in Paradise: Part 1,1994-11-15,8.00,478,32,2,tt0582335
-232,4696,Frasier,The Candidate,1994-11-08,8.50,554,31,2,tt0582520
-233,4695,Frasier,The Botched Language of Cranes,1994-11-01,8.10,483,30,2,tt0582519
-234,4694,Frasier,"Duke's, We Hardly Knew Ye",1994-10-18,7.80,460,29,2,tt0582390
-235,4693,Frasier,Flour Child,1994-10-11,8.30,546,28,2,tt0582398
-236,4692,Frasier,The Matchmaker,1994-10-04,9.30,886,27,2,tt0582543
-237,4691,Frasier,The Unkindest Cut of All,1994-09-27,7.70,475,26,2,tt0582560
-238,4690,Frasier,Slow Tango in South Seattle,1994-09-20,7.90,526,25,2,tt0582501
-239,4689,Frasier,My Coffee with Niles,1994-05-19,8.90,662,24,1,tt0582464
-240,4688,Frasier,Frasier Crane's Day Off,1994-05-12,8.70,625,23,1,tt0582403
-241,4687,Frasier,"Author, Author",1994-05-05,8.40,573,22,1,tt0582347
-242,4686,Frasier,Travels with Martin,1994-04-14,8.90,652,21,1,tt0582573
-243,4685,Frasier,Fortysomething,1994-03-31,7.60,505,20,1,tt0582401
-244,4684,Frasier,Give Him the Chair!,1994-03-17,8.10,533,19,1,tt0582414
-245,4683,Frasier,And the Whimper Is...,1994-02-17,7.90,501,18,1,tt0582344
-246,4682,Frasier,A Mid-Winter Night's Dream,1994-02-10,8.70,614,17,1,tt0582330
-247,4681,Frasier,The Show Where Lilith Comes Back,1994-02-03,8.50,602,16,1,tt0582553
-248,4680,Frasier,You Can't Tell a Crook by His Cover,1994-01-27,7.80,520,15,1,tt0582585
-249,4679,Frasier,Can't Buy Me Love,1994-01-20,7.80,532,14,1,tt0582360
-250,4678,Frasier,Guess Who's Coming to Breakfast,1994-01-06,8.00,538,13,1,tt0582418
-251,4677,Frasier,Miracle on Third or Fourth Street,1993-12-16,8.60,647,12,1,tt0582453
-252,4676,Frasier,Death Becomes Him,1993-12-02,7.70,525,11,1,tt0582376
-253,4675,Frasier,Oops,1993-11-18,8.00,536,10,1,tt0582468
-254,4674,Frasier,Selling Out,1993-11-11,8.00,541,9,1,tt0582492
-255,4673,Frasier,Beloved Infidel,1993-11-04,8.10,553,8,1,tt0582350
-256,4672,Frasier,Call Me Irresponsible,1993-10-28,8.00,565,7,1,tt0582359
-257,4671,Frasier,The Crucible,1993-10-21,7.80,566,6,1,tt0582522
-258,4670,Frasier,Here's Looking at You,1993-10-14,8.00,585,5,1,tt0582423
-259,4669,Frasier,I Hate Frasier Crane,1993-10-07,7.90,601,4,1,tt0582431
-260,4668,Frasier,Dinner at Eight,1993-09-30,8.30,649,3,1,tt0582383
-261,4667,Frasier,Space Quest,1994-04-27,8.10,640,2,1,tt0582507
-262,4666,Frasier,The Good Son,1994-04-20,8.70,897,1,1,tt0582531
+0,1131,Breaking Bad,Felina,2013-09-29,9.90,72781,62,5,tt2301455
+1,1130,Breaking Bad,Granite State,2013-09-22,9.50,26801,61,5,tt2301453
+2,1129,Breaking Bad,Ozymandias,2013-09-15,9.90,100873,60,5,tt2301451
+3,1128,Breaking Bad,To'hajiilee,2013-09-08,9.70,26623,59,5,tt2301449
+4,1127,Breaking Bad,Rabid Dog,2013-09-01,8.90,15424,58,5,tt2301447
+5,1126,Breaking Bad,Confessions,2013-08-25,9.50,18478,57,5,tt2301445
+6,1125,Breaking Bad,Buried,2013-08-18,9.00,14751,56,5,tt2301443
+7,1124,Breaking Bad,Blood Money,2013-08-11,9.40,17209,55,5,tt2301471
+8,1123,Breaking Bad,Gliding Over All,2012-09-02,9.50,17687,54,5,tt2301469
+9,1122,Breaking Bad,Say My Name,2012-08-26,9.40,16684,53,5,tt2301467
+10,1121,Breaking Bad,Buyout,2012-08-19,8.80,12955,52,5,tt2301465
+11,1120,Breaking Bad,Dead Freight,2012-08-12,9.50,19232,51,5,tt2301463
+12,1119,Breaking Bad,Fifty-One,2012-08-05,8.80,12598,50,5,tt2301461
+13,1118,Breaking Bad,Hazard Pay,2012-07-29,8.80,12525,49,5,tt2301459
+14,1117,Breaking Bad,Madrigal,2012-07-22,8.80,12988,48,5,tt2301457
+15,1116,Breaking Bad,Live Free or Die,2012-07-15,9.20,15739,47,5,tt2081647
+16,1115,Breaking Bad,Face Off,2011-10-09,9.80,33509,46,4,tt1683088
+17,1114,Breaking Bad,End Times,2011-10-02,9.40,13685,45,4,tt1683087
+18,1113,Breaking Bad,Crawl Space,2011-09-25,9.50,17769,44,4,tt1683086
+19,1112,Breaking Bad,Salud,2011-09-18,9.50,15470,43,4,tt1683085
+20,1111,Breaking Bad,Bug,2011-09-11,8.80,10778,42,4,tt1683096
+21,1110,Breaking Bad,Hermanos,2011-09-04,9.10,12089,41,4,tt1683095
+22,1109,Breaking Bad,Problem Dog,2011-08-28,8.80,10686,40,4,tt1683094
+23,1108,Breaking Bad,Cornered,2011-08-21,8.50,10201,39,4,tt1683093
+24,1107,Breaking Bad,Shotgun,2011-08-14,8.70,10072,38,4,tt1683092
+25,1106,Breaking Bad,Bullet Points,2011-08-07,8.70,10030,37,4,tt1683091
+26,1105,Breaking Bad,Open House,2011-07-31,7.90,10869,36,4,tt1683090
+27,1104,Breaking Bad,Thirty-Eight Snub,2011-07-24,8.20,10767,35,4,tt1683089
+28,1103,Breaking Bad,Box Cutter,2011-07-17,9.10,13136,34,4,tt1683084
+29,1102,Breaking Bad,Full Measure,2010-06-13,9.50,16323,33,3,tt1615553
+30,1101,Breaking Bad,Half Measures,2010-06-06,9.40,14453,32,3,tt1615552
+31,1100,Breaking Bad,Abiquiu,2010-05-30,8.50,10170,31,3,tt1615551
+32,1099,Breaking Bad,Fly,2010-05-23,7.60,18041,30,3,tt1615550
+33,1098,Breaking Bad,Kafkaesque,2010-05-16,8.40,10293,29,3,tt1615558
+34,1097,Breaking Bad,I See You,2010-05-09,8.80,10355,28,3,tt1615557
+35,1096,Breaking Bad,One Minute,2010-05-02,9.50,15052,27,3,tt1615944
+36,1095,Breaking Bad,Sunset,2010-04-25,9.20,12070,26,3,tt1615556
+37,1094,Breaking Bad,Más,2010-04-18,8.70,9950,25,3,tt1615555
+38,1093,Breaking Bad,Green Light,2010-04-11,8.10,10570,24,3,tt1615554
+39,1092,Breaking Bad,I.F.T.,2010-04-04,8.40,10312,23,3,tt1615187
+40,1091,Breaking Bad,Caballo sin Nombre,2010-03-28,8.70,10244,22,3,tt1615186
+41,1090,Breaking Bad,No Más,2010-03-21,8.60,10627,21,3,tt1528116
+42,1089,Breaking Bad,ABQ,2009-05-31,9.10,12577,20,2,tt1232248
+43,1088,Breaking Bad,Phoenix,2009-05-24,9.10,12514,19,2,tt1232247
+44,1087,Breaking Bad,Mandala,2009-05-17,8.80,11118,18,2,tt1232246
+45,1086,Breaking Bad,Over,2009-05-10,8.60,10685,17,2,tt1232245
+46,1085,Breaking Bad,4 Days Out,2009-05-03,8.90,12577,16,2,tt1232256
+47,1084,Breaking Bad,Better Call Saul,2009-04-26,9.00,12825,15,2,tt1232255
+48,1083,Breaking Bad,Negro Y Azul,2009-04-19,8.70,10898,14,2,tt1232254
+49,1082,Breaking Bad,Peekaboo,2009-04-12,8.80,12179,13,2,tt1232253
+50,1081,Breaking Bad,Breakage,2009-04-05,8.30,11018,12,2,tt1232252
+51,1080,Breaking Bad,Down,2009-03-29,8.10,11378,11,2,tt1232251
+52,1079,Breaking Bad,Bit by a Dead Bee,2009-03-22,8.30,11238,10,2,tt1232250
+53,1078,Breaking Bad,Grilled,2009-03-15,9.20,13603,9,2,tt1232249
+54,1077,Breaking Bad,Seven Thirty-Seven,2009-03-08,8.70,11532,8,2,tt1232244
+55,1076,Breaking Bad,A No-Rough-Stuff-Type Deal,2008-03-09,8.80,12967,7,1,tt1054729
+56,1075,Breaking Bad,Crazy Handful of Nothin',2008-03-02,9.20,14683,6,1,tt1054728
+57,1074,Breaking Bad,Gray Matter,2008-02-24,8.30,12741,5,1,tt1054727
+58,1073,Breaking Bad,Cancer Man,2008-02-17,8.20,13034,4,1,tt1054726
+59,1072,Breaking Bad,...And the Bag's in the River,2008-02-10,8.70,13377,3,1,tt1054725
+60,1071,Breaking Bad,Cat's in the Bag...,2008-01-27,8.70,13808,2,1,tt1054724
+61,1070,Breaking Bad,Pilot,2008-01-20,8.90,19623,1,1,tt0959621

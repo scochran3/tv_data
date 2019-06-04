@@ -1452,3 +1452,6 @@ h1, h2, h3, h4, h5, h6, figure {
 #length-of-show-stat {
   line-height: 1.6
 }
+.bokeh-chart {
+  height: 50vh;
+}

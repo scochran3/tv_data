@@ -477,8 +477,14 @@ def compareNumberOfRatings(df1, df2):
 def compareTopEpisodes(df1, df2):
 
 	# Top 5 shows per show
-	df1_top_shows = df1.sort_values(by='rating', ascending=False).head(10)[['episode_title', 'rating']][::-1]
-	df2_top_shows = df2.sort_values(by='rating', ascending=False).head(10)[['episode_title', 'rating']][::-1]
+	df1_top_shows = df1.sort_values(by='rating', ascending=False).head(10)[['episode_title', 'rating', 'season']][::-1]
+	df2_top_shows = df2.sort_values(by='rating', ascending=False).head(10)[['episode_title', 'rating', 'season']][::-1]
+
+	# Create episode number
+	df1_top_shows['season-episode'] = (df1_top_shows.groupby(['season']).cumcount()) + 1
+	df1_top_shows['episode_title'] = df1_top_shows['episode_title'] + " (S" + df1_top_shows["season"].astype(str) + "E" + df1_top_shows["season-episode"].astype(str) + ")"
+	df2_top_shows['season-episode'] = (df2_top_shows.groupby(['season']).cumcount()) + 1
+	df2_top_shows['episode_title'] = df2_top_shows['episode_title'] + " (S" + df2_top_shows["season"].astype(str) + "E" + df2_top_shows["season-episode"].astype(str) + ")"
 
 	# Check for two part episodes
 	# Check if episode name repeats (two part episode)
@@ -497,7 +503,6 @@ def compareTopEpisodes(df1, df2):
 
 	df1_top_shows['episode_title'] = show1HighestEpisodes
 	df2_top_shows['episode_title'] = show2HighestEpisodes
-
 
 	# Create the first figure
 	show1_source, show2_source = ColumnDataSource(df1_top_shows), ColumnDataSource(df2_top_shows)
@@ -548,7 +553,7 @@ def bestOfTheBestTopShows(df):
 	
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='scale_width', y_range=df['show'])
+	p = figure(sizing_mode='stretch_both', y_range=df['show'])
 	p.hbar(y="show", height=.5, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
@@ -573,13 +578,13 @@ def bestOfTheBestTopSeasons(df):
 
 	# Create the season-show field
 	df['rating'] = df['rating'].astype(float)
-	df['season-show'] = df['show'] + ' Season ' + df['season'].astype(str)
+	df['season-show'] = df['show'] + ' S' + df['season'].astype(str)
 	df = df.groupby('season-show')[['rating']].mean().reset_index().sort_values(by='rating', ascending=False).head(10)[::-1]
 	df['rating'] = round(df['rating'], 2)
 
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='scale_width', y_range=df['season-show'])
+	p = figure(sizing_mode='stretch_both', y_range=df['season-show'])
 	p.hbar(y="season-show", height=.5, right="rating", color="#191970", source=source)
 
 	# Format the chart
@@ -604,13 +609,12 @@ def bestOfTheBestTopEpisodes(df):
 
 	# Create the season-show field
 	df['rating'] = df['rating'].astype(float)
-	df['episode_title'] = df['episode_title'] + " (" + df['show'] + ", Season " + df['season'].astype(str) + ")"
+	df['episode_title'] = df['episode_title'] + " (" + df['show'] + ", S" + df['season'].astype(str) + ")"
 	df = df.groupby('episode_title')[['rating']].mean().reset_index().sort_values(by='rating', ascending=False).head(10)[::-1]
-	df['rating'] = round(df['rating'], 2)
 
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='scale_width', y_range=df['episode_title'])
+	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'])
 	p.hbar(y="episode_title", height=.5, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
@@ -641,7 +645,7 @@ def bestOfTheBestMostPopularEpisodes(df):
 
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='scale_width', y_range=df['episode_title'])
+	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'])
 	p.hbar(y="episode_title", height=.5, right="number_of_ratings", color="#191970", source=source)
 
 	# Format the chart
@@ -663,6 +667,29 @@ def bestOfTheBestMostPopularEpisodes(df):
 	return {'script': script, 'div': div}
 
 
+def bestOfTheBestRatingsOverTime(df):
+	
+	# Sort by airdate
+	df = df.groupby('air_date')[['rating']].mean().reset_index()
+	df['air_date'] = pd.to_datetime(df['air_date'], format='%Y-%m-%d')
+	df = df.set_index('air_date')
+	df = df.resample('Q').mean().reset_index()
+
+	# Create the figure
+	source = ColumnDataSource(df)
+	p = figure(sizing_mode='stretch_both', x_axis_type='datetime')
+	p.line(x='air_date', y='rating', line_width=2, color='#191970', source=source)
+	p.y_range = Range1d(0, 10)
+	
+	# Format chart
+	p.xaxis.axis_label = "Year"
+	p.yaxis.axis_label = "Rating (/10)"
+
+	# Return the figure
+	script, div = components(p)
+	script = jsmin(script)
+
+	return {'script': script, 'div': div}
 
 if __name__ == '__main__':
-	compareTopEpisodes(df1=pd.read_csv('frasier.csv'), df2=pd.read_csv('better-call-saul.csv'))
+	bestOfTheBestTopEpisodes(df=pd.read_csv('episodes.csv'))

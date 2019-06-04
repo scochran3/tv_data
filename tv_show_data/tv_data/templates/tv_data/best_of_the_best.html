@@ -4,7 +4,7 @@
 {% block title %}TV Datatron 3000 - Best Of The Best in TV{% endblock %}
 {% block content %}
 
-<link
+<!-- <link
     href="{% static 'bokeh/bokeh-0.13.0.min.css' %}"
     rel="stylesheet" type="text/css">
 <link
@@ -17,9 +17,19 @@
 <script src="{% static 'bokeh/bokeh-0.13.0.min.js' %}"></script>
 <script src="{% static 'bokeh/bokeh-widgets-0.13.0.min.js' %}"></script>
 <script src="{% static 'bokeh/bokeh-tables-0.13.0.min.js' %}"></script>
+ -->
 
+<link href="http://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.css" rel="stylesheet" type="text/css">
+<link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.css" rel="stylesheet" type="text/css">
+<link href="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.2.0.min.css" rel="stylesheet" type="text/css">
 
-<div class="row animate-box">
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.2.0.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-api-1.2.0.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.2.0.min.js"></script>
+
+<div class="row animate-box chart-section">
 	<div class='col-lg-12'>
 		<h6 class="breadcrumb-trail"><a href="{% url 'index' %}">Home</a> > Best Of The Best</h6>
 	</div>
@@ -28,44 +38,56 @@
 		<p>What are the highest rated TV shows of all time? What's the best season? What about episode? This section aggregates all of our TV ratings into some quick lists of the best of the best in TV shows according to the fans.</p>
 	</div>
 </div>
+<div class="row animate-box">
+	<div class="col-lg-3 col-xs-12">
+		<h2 class="chart-header">TV Ratings Over Time</h2>
+		<p>We have a lot of TV data...like a lot. So let's look at ratings over the long history of that data. We have shows goes back to the 80s and the chart below shows how shows have been rated since then through today (based on air date).</p>
+	</div>
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
+		{{bestOfTheBestRatingsOverTime.div|safe}}
+		{{bestOfTheBestRatingsOverTime.script|safe}}
+	</div>
+</div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-3 col-xs-12">
 		<h2 class="chart-header">Highest Rated Shows</h2>
 		<p>Here's the top rated shows according to IMDB. This is calculating by looking at the average rating episode across the entire shows history (minimum 20 episodes).</p>
 	</div>
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{bestOfTheBestTopShows.div|safe}}
 		{{bestOfTheBestTopShows.script|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{bestOfTheBestTopSeasons.div|safe}}
 		{{bestOfTheBestTopSeasons.script|safe}}
 	</div>
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-3 col-xs-12">
 		<h2 class="chart-header">Best Seasons</h2>
 		<p>I personally think the best season of any TV show is The Wire Season 4, but what about everyone else? This chart shows the top ten seasons by rating according to IMDB. Note that we don't include incomplete seasons.</p>
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-3 col-xs-12">
 		<h2 class="chart-header">Highest Rated Episodes</h2>
 		<p>What do you consider the best episode of TV you've ever seen? This chart shows the individual episodes with the highest ratings across all TV shows and all seasons. Just in case you want to rewatch we've incldue the show and season so you can head straight to Netflix to rewatch!</p>
 	</div>
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{bestOfTheBestTopEpisodes.div|safe}}
 		{{bestOfTheBestTopEpisodes.script|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{bestOfTheBestMostPopularEpisodes.div|safe}}
 		{{bestOfTheBestMostPopularEpisodes.script|safe}}
 	</div>
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-3 col-xs-12">
 		<h2 class="chart-header">Most Popular Episodes</h2>
 		<p>One measure of popularity is how many different people rated the episode. This chart shows the ten episodes of TV that have the most ratings across all shows and seasons.</p>
 	</div>
 </div>
+
+
 {% endblock %}
