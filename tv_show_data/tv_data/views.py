@@ -231,6 +231,8 @@ def show_comparer_shows(request, show1, show2):
 	show2_df = read_frame(show2_episodes)
 	show2_df = show2_df.sort_values(by='episode_number', ascending=False)
 
+	show2_df.to_csv('delete.csv')
+
 	# Create comparison charts
 	compareSeasons = createIMDBVisualizations.compareSeasons(show1_df, show2_df)
 	numberOfEpisodes = createIMDBVisualizations.compareNumberOfEpisodes(show1_df, show2_df)

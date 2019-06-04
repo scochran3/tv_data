@@ -210,6 +210,8 @@ def highestLowestRatedEpisodes(df):
 
 	# Sort by rating
 	df = df[['episode_number', 'episode_title', 'rating', 'season']]
+	df['season-episode'] = (df.groupby(['season']).cumcount()) + 1
+	df['episode_title'] = df['episode_title'] + " (S" + df["season"].astype(str) + "E" + df["season-episode"].astype(str) + ")"
 	df = df.sort_values(by='rating', ascending=False)
 
 	# Get top and lowest rated
@@ -379,6 +381,8 @@ def compareSeasons(df1, df2):
 	df1_by_season = df1.groupby('season')[['rating']].mean().reset_index()
 	df2_by_season = df2.groupby('season')[['rating']].mean().reset_index()
 
+	print (df2_by_season)
+
 	# Create the figure
 	source1, source2 = ColumnDataSource(df1_by_season), ColumnDataSource(df2_by_season)
 	p = figure(plot_width=800, plot_height=400, sizing_mode='scale_width')
@@ -405,7 +409,7 @@ def compareSeasons(df1, df2):
 	# Return the figure
 	script, div = components(p)
 	script = jsmin(script)
-	
+
 	return {'script': script, 'div': div, 'season_1_average':season_1_average, 'season_2_average':season_2_average,
 			'season_1_max':season_1_max, 'season_2_max':season_2_max, 'season_1_min':season_1_min, 'season_2_min':season_2_min}
 
@@ -475,9 +479,28 @@ def compareTopEpisodes(df1, df2):
 	# Top 5 shows per show
 	df1_top_shows = df1.sort_values(by='rating', ascending=False).head(10)[['episode_title', 'rating']][::-1]
 	df2_top_shows = df2.sort_values(by='rating', ascending=False).head(10)[['episode_title', 'rating']][::-1]
-	show1_source, show2_source = ColumnDataSource(df1_top_shows), ColumnDataSource(df2_top_shows)
+
+	# Check for two part episodes
+	# Check if episode name repeats (two part episode)
+	show1HighestEpisodes, show2HighestEpisodes = [], []
+	for i in df1_top_shows['episode_title']:
+		if i not in show1HighestEpisodes:
+			show1HighestEpisodes.append(i)
+		else:
+			show1HighestEpisodes.append('{} Part 2'.format(i))
+
+	for i in df2_top_shows['episode_title']:
+		if i not in show2HighestEpisodes:
+			show2HighestEpisodes.append(i)
+		else:
+			show2HighestEpisodes.append('{} Part 2'.format(i))
+
+	df1_top_shows['episode_title'] = show1HighestEpisodes
+	df2_top_shows['episode_title'] = show2HighestEpisodes
+
 
 	# Create the first figure
+	show1_source, show2_source = ColumnDataSource(df1_top_shows), ColumnDataSource(df2_top_shows)
 	p1 = figure(sizing_mode="scale_width", y_range=df1_top_shows["episode_title"])
 	p1.hbar(y="episode_title", right="rating", height=.5, color="#8B0000", source=show1_source)
 	labels = LabelSet(x='rating', y='episode_title', 
@@ -511,6 +534,7 @@ def compareTopEpisodes(df1, df2):
 
 	script2, div2 = components(p2)
 	script2 = jsmin(script2)
+
 
 	return {'script1':script1, 'script2': script2, 'div1':div1, 'div2':div2}
 
@@ -641,4 +665,4 @@ def bestOfTheBestMostPopularEpisodes(df):
 
 
 if __name__ == '__main__':
-	compareOverallRating(df1=pd.read_csv('Seinfeld.csv'), df2=pd.read_csv('Game Of Thrones.csv'))
+	compareTopEpisodes(df1=pd.read_csv('frasier.csv'), df2=pd.read_csv('better-call-saul.csv'))
