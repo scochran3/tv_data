@@ -26,6 +26,8 @@ def getShowIMBDID(show):
 	url = END_POINT + 't={}&r=json'.format(show)
 	r = requests.get(url)
 	data = json.loads(r.content)
+
+	pprint (data)
 	
 	try:
 		# Parse data

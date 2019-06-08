@@ -99,15 +99,20 @@ h1, h2, h3, h4, h5, h6, figure {
     top: 0;
   }
 }
-.fh5co-nav .left-menu, .fh5co-nav .right-menu, .fh5co-nav .logo {
-  display: inline-block;
-  width: 40%;
-  float: left;
+
+@media screen and (min-width: 768px) {
+  .fh5co-nav .left-menu, .fh5co-nav .right-menu, .fh5co-nav .logo {
+    display: inline-block;
+    width: 40%;
+    float: left;
+  }
+  .fh5co-nav .logo {
+    width: 20%;
+    float: left;
+    text-align: center;
+  }
 }
-.fh5co-nav .logo {
-  width: 20%;
-  float: left;
-}
+
 .fh5co-nav #fh5co-logo {
   font-size: 2em;
   margin: 0;
@@ -142,6 +147,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   list-style: none;
   display: inline;
+  font-weight: bold;
 }
 .fh5co-nav ul li a {
   font-size: 18px;

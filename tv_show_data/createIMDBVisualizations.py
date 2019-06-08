@@ -59,7 +59,8 @@ def plotEpisodeRatingsOverTime(df):
 
 	# Create the plot
 	source = ColumnDataSource(df)
-	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
+	p = figure(sizing_mode='stretch_both', y_range=Range1d(bounds=(0, 1)),
+             x_range=Range1d(bounds=(0, 1)), tools=[])
 	p.line(x='episode_number', y='rating', line_width=3, line_color='#8B0000', source=source)
 
 	# Format plot
@@ -96,7 +97,7 @@ def plotEpisodeRatingHistogram(df):
 
 	# Create the blank plot
 	source = ColumnDataSource(hist_df)
-	p = figure(plot_height = 600, plot_width = 600, x_axis_label = 'Rating (/10)', y_axis_label = 'Number of Episodes with Score', sizing_mode='stretch_both')
+	p = figure(x_axis_label = 'Rating (/10)', y_axis_label = 'Number of Episodes with Score', sizing_mode='stretch_both', tools=[])
 
 	# Add a quad glyph
 	p.quad(bottom=0, top='counts',  left='left', right='right',  
@@ -131,12 +132,12 @@ def plotNumberOfRatingsOverTime(df):
 
 	# Create the plot
 	source = ColumnDataSource(df)
-	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
+	p = figure(sizing_mode='stretch_both', tools=[])
 	p.line(x='episode_number', y='number_of_ratings', line_width=3, line_color='#8B0000', source=source)
 
 	# Format plot
 	p.xaxis.axis_label = 'Episode Number'
-	p.yaxis.axis_label = 'Number of Ratings'
+	# p.yaxis.axis_label = 'Number of Ratings'
 	p.yaxis.formatter = NumeralTickFormatter(format="0,0")
 	p.y_range=Range1d(0, df['number_of_ratings'].max()*1.05)
 	p.x_range=Range1d(1, df['episode_number'].max()+1)
@@ -162,7 +163,7 @@ def plotRatingsPerSeason(df):
 
 	# Create the plot
 	source = ColumnDataSource(df_grouped)
-	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
+	p = figure(sizing_mode='stretch_both', tools=[])
 	p.line(x='season', y='rating', line_width=3, line_color='#8B0000', source=source)
 	p.circle(x='season', y='rating', size=15, 
 			line_color='#8B0000', fill_color='#FFFFFF', hover_color='#A9A9A9', 
@@ -240,7 +241,7 @@ def highestLowestRatedEpisodes(df):
 	# Create bar charts
 	# Top chart
 	source_highest = ColumnDataSource(highest_rated)
-	p_highest = figure(plot_height=300, width=500, y_range=highest_rated['episode_title'], sizing_mode='stretch_both')
+	p_highest = figure(y_range=highest_rated['episode_title'], sizing_mode='stretch_both', tools=[])
 	p_highest.hbar(y='episode_title', right='rating', height=.5, color='#191970', source=source_highest)
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source_highest, 
@@ -251,7 +252,7 @@ def highestLowestRatedEpisodes(df):
 
 	# Bottom Chart
 	source_lowest = ColumnDataSource(lowest_rated)
-	p_lowest = figure(plot_height=300, width=500, y_range=lowest_rated['episode_title'], sizing_mode='stretch_both')
+	p_lowest = figure(y_range=lowest_rated['episode_title'], sizing_mode='stretch_both', tools=[])
 	p_lowest.hbar(y='episode_title', right='rating', height=.5, color='#8B0000', source=source_lowest)
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source_lowest, 
@@ -293,7 +294,7 @@ def ratingsVsNumberOfReviews(df):
 	
 	# Create chart
 	source = ColumnDataSource(df)
-	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
+	p = figure(sizing_mode='stretch_both', tools=[])
 	p.circle(x='number_of_ratings', y='rating', source=source, size='sizing', 
 				color={'field': 'rating', 'transform': color_mapper}, alpha=.7, 
 				line_color='#000000', hover_color='#A9A9A9')
@@ -347,7 +348,7 @@ def compareOverallRating(df1, df2):
 
 	# Create plot
 	source = ColumnDataSource(df_combined)
-	p = figure(sizing_mode='stretch_both', y_range=df_combined['show'])
+	p = figure(sizing_mode='stretch_both', y_range=df_combined['show'], tools=[])
 	p.hbar(y='show', right='rating', height=.5, source=source, color='color')
 
 	# Style the plot
@@ -391,7 +392,7 @@ def compareSeasons(df1, df2):
 
 	# Create the figure
 	source1, source2 = ColumnDataSource(df1_by_season), ColumnDataSource(df2_by_season)
-	p = figure(plot_width=800, plot_height=400, sizing_mode='stretch_both')
+	p = figure(sizing_mode='stretch_both', tools=[])
 	p.line(x='season', y='rating', line_width=2, source=source1, name=df1['show'].iloc[0], legend=df1['show'].iloc[0], color='#8B0000')
 	p.circle(x='season', y='rating', size=15, source=source1, name=df1['show'].iloc[0], legend=df1['show'].iloc[0], color='#8B0000')
 	p.line(x='season', y='rating', line_width=2, source=source2, name=df2['show'].iloc[0], legend=df2['show'].iloc[0], color='#191970')
@@ -429,7 +430,7 @@ def compareNumberOfEpisodes(df1, df2):
 
 	# Create plot
 	source = ColumnDataSource(df_combined)
-	p = figure(sizing_mode='stretch_both', y_range=df_combined['show'])
+	p = figure(sizing_mode='stretch_both', y_range=df_combined['show'], tools=[])
 	p.hbar(y='show', right='episode_number', height=.5, source=source, color='color')
 
 	# Style the plot
@@ -458,7 +459,7 @@ def compareNumberOfRatings(df1, df2):
 
 	# Create figure
 	show1_source, show2_source = ColumnDataSource(df1), ColumnDataSource(df2)
-	p = figure(sizing_mode='stretch_both')
+	p = figure(sizing_mode='stretch_both', tools=[])
 	p.line(x='episode_number', y='number_of_ratings', source=show1_source, color='#8B0000', line_width=2)
 	p.line(x='episode_number', y='number_of_ratings', source=show2_source, color='#191970', line_width=2)
 	
@@ -517,7 +518,7 @@ def compareTopEpisodes(df1, df2):
 
 	# Create the first figure
 	show1_source, show2_source = ColumnDataSource(df1_top_shows), ColumnDataSource(df2_top_shows)
-	p1 = figure(sizing_mode="stretch_both", y_range=df1_top_shows["episode_title"])
+	p1 = figure(sizing_mode="stretch_both", y_range=df1_top_shows["episode_title"], tools=[])
 	p1.hbar(y="episode_title", right="rating", height=.5, color="#8B0000", source=show1_source)
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=show1_source, 
@@ -531,7 +532,7 @@ def compareTopEpisodes(df1, df2):
 	p1.yaxis.major_label_text_font_style = 'bold'
 
 	# Create the second figure
-	p2 = figure(sizing_mode="stretch_both", y_range=df2_top_shows["episode_title"])
+	p2 = figure(sizing_mode="stretch_both", y_range=df2_top_shows["episode_title"], tools=[])
 	p2.hbar(y="episode_title", right="rating", height=.5, color="#191970", source=show2_source)
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=show2_source, 
@@ -564,7 +565,7 @@ def bestOfTheBestTopShows(df):
 	
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='stretch_both', y_range=df['show'])
+	p = figure(sizing_mode='stretch_both', y_range=df['show'], tools=[])
 	p.hbar(y="show", height=.5, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
@@ -595,7 +596,7 @@ def bestOfTheBestTopSeasons(df):
 
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='stretch_both', y_range=df['season-show'])
+	p = figure(sizing_mode='stretch_both', y_range=df['season-show'], tools=[])
 	p.hbar(y="season-show", height=.5, right="rating", color="#191970", source=source)
 
 	# Format the chart
@@ -625,7 +626,7 @@ def bestOfTheBestTopEpisodes(df):
 
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'])
+	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'], tools=[])
 	p.hbar(y="episode_title", height=.5, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
@@ -656,7 +657,7 @@ def bestOfTheBestMostPopularEpisodes(df):
 
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'])
+	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'], tools=[])
 	p.hbar(y="episode_title", height=.5, right="number_of_ratings", color="#191970", source=source)
 
 	# Format the chart
@@ -688,13 +689,13 @@ def bestOfTheBestRatingsOverTime(df):
 
 	# Create the figure
 	source = ColumnDataSource(df)
-	p = figure(sizing_mode='stretch_both', x_axis_type='datetime')
+	p = figure(sizing_mode='stretch_both', x_axis_type='datetime', tools=[])
 	p.line(x='air_date', y='rating', line_width=2, color='#191970', source=source)
 	p.y_range = Range1d(0, 10)
 	
 	# Format chart
 	p.xaxis.axis_label = "Year"
-	p.yaxis.axis_label = "Rating (/10)"
+	# p.yaxis.axis_label = "Rating (/10)"
 
 	# Return the figure
 	script, div = components(p)
