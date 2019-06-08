@@ -47,13 +47,13 @@
 		<h2 class="chart-header">Ratings Over Time</h2>
 		<p>This chart shows how each episode of {{this_show.title}} was rated on IMDB, which uses a 1 to 10 scale. Over the course of {{episodeRatingsOverTime.7}} episodes, the average score per episode is {{episodeRatingsOverTime.2}} with the highest rated episode getting a score of {{episodeRatingsOverTime.3}} (Episode: {{episodeRatingsOverTime.4}}) and the lowest rated episode getting a score of {{episodeRatingsOverTime.5}} (Episode: {{episodeRatingsOverTime.6}}).</p>
 	</div>
-	<div class="col-lg-8 col-xs-12 chart-section">
+	<div class="col-lg-8 col-xs-12 chart-section bokeh-chart">
 		{{episodeRatingsOverTime.0|safe}}
 		{{episodeRatingsOverTime.1|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-xs-12 bokeh-chart">
 		{{episodeRatingsHistogram.0|safe}}
 		{{episodeRatingsHistogram.1|safe}}
 	</div>
@@ -67,13 +67,13 @@
 		<h2 class="chart-header">Ratings Per Episode</h2>
 		<p>The chart below shows how many ratings each episode of {{this_show.title}} received on IMDB. The episode with the most ratings was "{{numberOfRatingsOverTime.2}}" ({{numberOfRatingsOverTime.3|intcomma}} ratings) and the episode with the least ratings was "{{numberOfRatingsOverTime.4}}" ({{numberOfRatingsOverTime.5|intcomma}} ratings). On average, each episode of {{this_show.title}} gets {{numberOfRatingsOverTime.6|intcomma}} users rating it.</p>
 	</div>
-	<div class="col-lg-9 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{numberOfRatingsOverTime.0|safe}}
 		{{numberOfRatingsOverTime.1|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-9 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{ratingsVsNumberOfReviews.0|safe}}
 		{{ratingsVsNumberOfReviews.1|safe}}
 	</div>
@@ -87,13 +87,13 @@
 		<h2 class="chart-header">Ratings Per Season</h2>
 		<p>The chart below shows how ratings for {{this_show.title}} varied by season. Overall the season with the best rating was Season {{ratingPerSeason.3}} with a rating of {{ratingPerSeason.4}}. The season with the lowest rating was Season {{ratingPerSeason.5}} with a rating of {{ratingPerSeason.6}}. The average season got a overall rating of {{ratingPerSeason.2}}
 	</div>
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-xs-12 bokeh-chart">
 		{{ratingPerSeason.0|safe}}
 		{{ratingPerSeason.1|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-9 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{highestLowestRatedEpisodes.0|safe}}
 		{{highestLowestRatedEpisodes.1|safe}}
 	</div>
@@ -107,7 +107,7 @@
 		<h2 class="chart-header">Worst Episodes</h2>
 		<p>Of course, every episode cannot be legendary. This chart shows what fans rate as the five worst episodes in the history of {{this_show.title}}. They rate "{{episodeRatingsOverTime.6}}" as the worst episode ever with a score of {{episodeRatingsOverTime.5}}.</p>
 	</div>
-	<div class="col-lg-9 col-xs-12">
+	<div class="col-lg-9 col-xs-12 bokeh-chart">
 		{{highestLowestRatedEpisodes.2|safe}}
 		{{highestLowestRatedEpisodes.3|safe}}
 	</div>

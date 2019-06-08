@@ -57,13 +57,13 @@
 		<h2 class="chart-header">Overall Rating</h2>
 		<p>{{show1.title}}, over the course of {{compareOverallRating.show_1_number_of_episodes}} episodes, has an average rating of {{compareOverallRating.show_1_rating}}. {{show2.title}}, which has a total of {{compareOverallRating.show_2_number_of_episodes}} episodes, has an average rating of {{compareOverallRating.show_2_rating}}.</p>
 	</div>
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-xs-12 bokeh-chart">
 		{{compareOverallRating.div|safe}}
 		{{compareOverallRating.script|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-xs-12 bokeh-chart">
 		{{compareSeasons.div|safe}}
 		{{compareSeasons.script|safe}}
 	</div>
@@ -82,7 +82,7 @@
 		<h2 class="chart-header">Number Of Episodes</h2>
 		<p>{{show1.title}} has a total of {{numberOfEpisodes.show_1_episodes}} episodes and {{show2.title}} has a total of {{numberOfEpisodes.show_2_episodes}} episodes.</p>
 	</div>
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-xs-12 bokeh-chart">
 		{{numberOfEpisodes.div|safe}}
 		{{numberOfEpisodes.script|safe}}
 	</div>
@@ -94,7 +94,7 @@
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-8 col-xs-12">
+	<div class="col-lg-8 col-xs-12 bokeh-chart">
 		{{compareNumberOfRatings.div|safe}}
 		{{compareNumberOfRatings.script|safe}}
 	</div>
@@ -113,12 +113,12 @@
 		<h2 class="chart-header">Top Episode Comparison</h2>
 		<p>Let's compare the best episodes of {{show1.title}} and {{show2.title}}. Which show has more great episodes? Below you can see the ten highest rated episoes of both shows.
 	</div>
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-6 col-xs-12 bokeh-chart">
 		<h3>{{show1.title}}</h3>
 		{{compareTopEpisodes.div1|safe}}
 		{{compareTopEpisodes.script1|safe}}
 	</div>
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-6 col-xs-12 bokeh-chart">
 		<h3>{{show2.title}}</h3>
 		{{compareTopEpisodes.div2|safe}}
 		{{compareTopEpisodes.script2|safe}}
