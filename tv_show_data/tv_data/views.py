@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 from django.utils.text import slugify
 from django_pandas.io import read_frame
 import createIMDBVisualizations
+from fuzzywuzzy import fuzz, process
 
 
 def index(request):
@@ -58,8 +59,6 @@ def view_show(request, show_title):
 	lengthOfShowMinutes = this_show.runtime * len(episodes_df)
 	lengthOfShowHours = round(lengthOfShowMinutes / 60, 1)
 	lengthOfShowDays = round(lengthOfShowMinutes / (60*24), 1)
-
-	episodes_df.to_csv('{}.csv'.format(this_show))
 
 	# Return data to page
 	context = {'this_show': this_show,
@@ -160,7 +159,7 @@ def show_comparer(request):
 		show_title, result = checkShow(request)
 
 		if result == "Show In Database":
-			return redirect('view_show', show_title=slugify(show_title))
+			return redirect('show_comparer')
 		elif result == "Show Added":
 			if "add-show" in request.POST:
 				return redirect("show_comparer")
@@ -180,10 +179,9 @@ def show_comparer(request):
 			request.session["shows_match"] = "Please select two different shows to compare."
 			return redirect('show_comparer')
 		else:
-			request.session["shows_match"] = ''
+			request.session["shows_match"] = None
 
 		return redirect('show_comparer_shows', show1=show1, show2=show2)
-
 
 	shows = Show.objects.all().order_by('title')
 
@@ -327,20 +325,36 @@ def about_us(request):
 
 
 def checkShow(request):
+
+	# Pull all shows
+	all_shows = Show.objects.all()
+
 	# Get show title input
 	show_title = request.POST.get('show_title').lower().title()
+
+	# Check if the string is a typo using fuzzy logic
+	for show in all_shows:
+		if fuzz.ratio(show_title, show.title) > 70 and show.title != show_title:
+			request.session["redirection"] = 'You entered a show of "{}", but we think you meant {}, so we redirected your search. If this is incorrect please search again.'.format(show_title, show.title)
+			request.session["error"] = None
+			show_title = show.title
+			return show_title, "Show In Database"
+		
 
 	# If the show is not found
 	if not gatherIMDBData.getShowIMBDID(show_title):
 		request.session["error"] = "Sorry, the show {} was not found. Please try a different show.".format(show_title)
+		request.session["redirection"] = ''
 		return show_title, "Show Not Found"
 	else:
-		request.session["error"] = ''
+		request.session["error"] = None
+		request.session["redirection"] = None
 
 
-	# Check if show in database, if not pull data from IMDB
-	# Show in database
+	# If they show already exists in the database
 	if Show.objects.filter(title=show_title):
+		print ("THIS IS HAPPENING!!!!!!!!!!!!!!!")
+		request.session["redirection"] = None
 		return show_title, "Show In Database"
 
 	# Show not in database

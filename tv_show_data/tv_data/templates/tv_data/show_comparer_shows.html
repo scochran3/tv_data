@@ -51,6 +51,12 @@
 	<div class="col-lg-12">
 		<h1>Show Comparison - {{show1}} vs. {{show2}}</h1>
 	</div>
+	<div class="poster-image-section col-lg-6">
+		<img class="poster-image" src="{{show1.poster_url}}" />
+	</div>
+	<div class="poster-image-section col-lg-6">
+		<img class="poster-image" src="{{show2.poster_url}}" />
+	</div>
 </div>
 <div class="row animate-box first-chart-section">
 	<div class="col-lg-4 col-xs-12">
@@ -63,11 +69,7 @@
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-8 col-xs-12 bokeh-chart">
-		{{compareSeasons.div|safe}}
-		{{compareSeasons.script|safe}}
-	</div>
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-4 col-lg-push-8 col-xs-12">
 		<h2 class="chart-header">Compare Seasons</h2>
 		<p>The chart to the left shows each season of {{show1.title}} and {{show2.title}} were rated on IMDB. Let's break it down!</p>
 		<ul>
@@ -75,6 +77,10 @@
 			<li>The best season of {{show1.title}} has a rating of <strong>{{compareSeasons.season_1_max}}</strong> while the best season of {{show2.title}} is <strong>{{compareSeasons.season_2_max}}</strong></li>
 			<li>The worst season of {{show1.title}} has a rating of <strong>{{compareSeasons.season_1_min}}</strong> while the worst season of {{show2.title}} is <strong>{{compareSeasons.season_2_min}}</strong>.</li>
 		</ul>
+	</div>
+	<div class="col-lg-8 col-lg-pull-4 col-xs-12 bokeh-chart">
+		{{compareSeasons.div|safe}}
+		{{compareSeasons.script|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
@@ -94,11 +100,7 @@
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-8 col-xs-12 bokeh-chart">
-		{{compareNumberOfRatings.div|safe}}
-		{{compareNumberOfRatings.script|safe}}
-	</div>
-	<div class="col-lg-4 col-xs-12">
+	<div class="col-lg-4 col-lg-push-8 col-xs-12">
 		<h2 class="chart-header">Popularity Comparison</h2>
 		<p>The chart to the left shows how many ratings each episode of both shows received.</p>
 		<ul>
@@ -106,6 +108,10 @@
 			<li>{{show1.title}} and {{show2.title}} don't have the same number of episodes, so what about ratings per episode? {{show1.title}} has an average of <strong>{{compareNumberOfRatings.show_1_average_ratings|intcomma}} ratings</strong> and {{show2.title}} has a total of <strong>{{compareNumberOfRatings.show_2_average_ratings|intcomma}} ratings</strong>.</li>
 			<li>What about the most popular episode? For {{show1.title}} the most popular episode got a total of {{compareNumberOfRatings.show_1_max_ratings|intcomma}} ratings. The most popular episode of {{show2.title}} got a total of {{compareNumberOfRatings.show_2_max_ratings|intcomma}} ratings.</li>
 		</ul>
+	</div>
+	<div class="col-lg-8 col-lg-pull-4 col-xs-12 bokeh-chart">
+		{{compareNumberOfRatings.div|safe}}
+		{{compareNumberOfRatings.script|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">

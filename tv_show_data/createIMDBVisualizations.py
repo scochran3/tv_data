@@ -15,6 +15,7 @@ from bokeh.themes import Theme
 import itertools
 from jsmin import jsmin
 import numpy as np
+import math
 
 
 
@@ -53,40 +54,13 @@ curdoc().theme = Theme(json={'attrs': {
     }
 }})
 
-def plotNumberOfRatingsOverTime(df):
-
-	# Create the plot
-	source = ColumnDataSource(df)
-	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
-	p.line(x='episode_number', y='number_of_ratings', line_width=3, line_color='#66CDAA', source=source)
-
-	# Format plot
-	p.xaxis.axis_label = 'Episode Number'
-	p.yaxis.axis_label = 'Number of Ratings'
-	p.yaxis.formatter = NumeralTickFormatter(format="0,0")
-	p.y_range=Range1d(0, df['number_of_ratings'].max()*1.05)
-	p.x_range=Range1d(1, df['episode_number'].max()+1)
-
-	# Return the figure
-	script, div = components(p)
-	script = jsmin(script)
-
-	# Get the numbers for the paragraph
-	episodeWithMostRatings = df['episode_title'][df['number_of_ratings'].idxmax()]
-	episodeWithMostRatingsCount = df['number_of_ratings'].max()
-	episodeWithLeastRatings = df['episode_title'][df['number_of_ratings'].idxmin()]
-	episodeWithLeastRatingsCount = df['number_of_ratings'].min()
-	averageNumberOfReviews = int(df['number_of_ratings'].mean())
-
-	return script, div, episodeWithMostRatings, episodeWithMostRatingsCount, episodeWithLeastRatings, episodeWithLeastRatingsCount, averageNumberOfReviews
-
 
 def plotEpisodeRatingsOverTime(df):
 
 	# Create the plot
 	source = ColumnDataSource(df)
 	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
-	p.line(x='episode_number', y='rating', line_width=3, line_color='#cc99ff', source=source)
+	p.line(x='episode_number', y='rating', line_width=3, line_color='#8B0000', source=source)
 
 	# Format plot
 	p.xaxis.axis_label = 'Episode Number'
@@ -126,7 +100,7 @@ def plotEpisodeRatingHistogram(df):
 
 	# Add a quad glyph
 	p.quad(bottom=0, top='counts',  left='left', right='right',  
-			fill_color='red', line_color='black', hover_color='#A9A9A9',
+			fill_color='#191970', line_color='black', hover_color='#A9A9A9',
 			hover_line_color='#000000', source=source)
 	p.y_range=Range1d(0, hist_df['counts'].max()*1.05)
 
@@ -153,6 +127,34 @@ def plotEpisodeRatingHistogram(df):
 	return script, div
 
 
+def plotNumberOfRatingsOverTime(df):
+
+	# Create the plot
+	source = ColumnDataSource(df)
+	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
+	p.line(x='episode_number', y='number_of_ratings', line_width=3, line_color='#8B0000', source=source)
+
+	# Format plot
+	p.xaxis.axis_label = 'Episode Number'
+	p.yaxis.axis_label = 'Number of Ratings'
+	p.yaxis.formatter = NumeralTickFormatter(format="0,0")
+	p.y_range=Range1d(0, df['number_of_ratings'].max()*1.05)
+	p.x_range=Range1d(1, df['episode_number'].max()+1)
+
+	# Return the figure
+	script, div = components(p)
+	script = jsmin(script)
+
+	# Get the numbers for the paragraph
+	episodeWithMostRatings = df['episode_title'][df['number_of_ratings'].idxmax()]
+	episodeWithMostRatingsCount = df['number_of_ratings'].max()
+	episodeWithLeastRatings = df['episode_title'][df['number_of_ratings'].idxmin()]
+	episodeWithLeastRatingsCount = df['number_of_ratings'].min()
+	averageNumberOfReviews = int(df['number_of_ratings'].mean())
+
+	return script, div, episodeWithMostRatings, episodeWithMostRatingsCount, episodeWithLeastRatings, episodeWithLeastRatingsCount, averageNumberOfReviews
+
+
 def plotRatingsPerSeason(df):
 
 	# Group By Season
@@ -161,9 +163,9 @@ def plotRatingsPerSeason(df):
 	# Create the plot
 	source = ColumnDataSource(df_grouped)
 	p = figure(plot_width=1000, plot_height=500, sizing_mode='stretch_both')
-	p.line(x='season', y='rating', line_width=3, line_color='#1E90FF', source=source)
+	p.line(x='season', y='rating', line_width=3, line_color='#8B0000', source=source)
 	p.circle(x='season', y='rating', size=15, 
-			line_color='#1E90FF', fill_color='#FFFFFF', hover_color='#A9A9A9', 
+			line_color='#8B0000', fill_color='#FFFFFF', hover_color='#A9A9A9', 
 			hover_line_color='#000000', line_width=5, source=source)
 
 	# Format plot
@@ -239,7 +241,7 @@ def highestLowestRatedEpisodes(df):
 	# Top chart
 	source_highest = ColumnDataSource(highest_rated)
 	p_highest = figure(plot_height=300, width=500, y_range=highest_rated['episode_title'], sizing_mode='stretch_both')
-	p_highest.hbar(y='episode_title', right='rating', height=.5, color='#006400', source=source_highest)
+	p_highest.hbar(y='episode_title', right='rating', height=.5, color='#191970', source=source_highest)
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source_highest, 
 						text_font_size='10pt', text_font_style='bold',
@@ -250,7 +252,7 @@ def highestLowestRatedEpisodes(df):
 	# Bottom Chart
 	source_lowest = ColumnDataSource(lowest_rated)
 	p_lowest = figure(plot_height=300, width=500, y_range=lowest_rated['episode_title'], sizing_mode='stretch_both')
-	p_lowest.hbar(y='episode_title', right='rating', height=.5, color='#B22222', source=source_lowest)
+	p_lowest.hbar(y='episode_title', right='rating', height=.5, color='#8B0000', source=source_lowest)
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source_lowest, 
 						text_font_size='10pt', text_font_style='bold',
@@ -287,7 +289,7 @@ def ratingsVsNumberOfReviews(df):
 	df['sizing'] = (df['number_of_ratings'] / df['number_of_ratings'].mean()) * 10
 	color_mapper = LinearColorMapper(palette=['#8B0000', '#B22222', '#FF8C00', 
 												'#FFD700', '#FFFF00', '#228B22',
-												'#006400'], low=df['rating'].min(), high=10)
+												'#006400'], low=6, high=10)
 	
 	# Create chart
 	source = ColumnDataSource(df)
@@ -299,9 +301,8 @@ def ratingsVsNumberOfReviews(df):
 	# Format chart
 	p.xaxis.formatter = NumeralTickFormatter(format='0,0')
 	p.yaxis.formatter = NumeralTickFormatter(format='0.0')
-	p.x_range = Range1d(0, df['number_of_ratings'].max()*1.05)
+	p.x_range = Range1d(0, df['number_of_ratings'].max()*1.1)
 	p.y_range = Range1d(0,11)
-	# p.yaxis.axis_label = 'Rating (/10)'
 	p.xaxis.axis_label = 'Number Of Ratings'
 
 
@@ -351,7 +352,8 @@ def compareOverallRating(df1, df2):
 
 	# Style the plot
 	p.xaxis.axis_label = 'Average Rating Per Episode'
-	p.yaxis.axis_label = ''
+	p.yaxis.major_tick_line_color = None
+	p.yaxis.major_label_text_font_size  = '0pt'
 	p.x_range=Range1d(0, 10.5)
 
 	# Data points
@@ -360,7 +362,11 @@ def compareOverallRating(df1, df2):
 	show_2_rating = round(df_combined['rating'].iloc[1], 2)
 	show_2_number_of_episodes = df2['episode_number'].max()
 
-	print (show_1_rating, show_2_rating)
+	labels = LabelSet(x='rating', y='show', 
+						text='show', level='glyph', source=source, 
+						text_font_size='10pt', text_font_style='bold',
+						x_offset=20, y_offset=-len('show')-25, angle=math.pi/2)
+	p.add_layout(labels)
 
 	# Return the figure
 	script, div = components(p)
@@ -375,7 +381,7 @@ def compareSeasons(df1, df2):
 
 	# Adjust datatypes
 	df1['rating'] = df1['rating'].astype(float)
-	df2['rating'] = df1['rating'].astype(float)
+	df2['rating'] = df2['rating'].astype(float)
 
 	# Group by season
 	df1_by_season = df1.groupby('season')[['rating']].mean().reset_index()
@@ -394,7 +400,6 @@ def compareSeasons(df1, df2):
 	# Style the plot
 	p.y_range = Range1d(0, 10)
 	p.xaxis.axis_label = 'Season'
-	p.yaxis.axis_label = 'Rating'
 	p.yaxis.formatter = NumeralTickFormatter(format="0.0")
 	p.legend.location = 'bottom_left'
 
@@ -428,9 +433,15 @@ def compareNumberOfEpisodes(df1, df2):
 	p.hbar(y='show', right='episode_number', height=.5, source=source, color='color')
 
 	# Style the plot
-	p.xaxis.axis_label = 'Number Of Episodes'
-	p.yaxis.axis_label = ''
-	p.x_range=Range1d(0, df_combined['episode_number'].max()*1.05)
+	p.xaxis.axis_label = 'Average Rating Per Episode'
+	p.yaxis.major_tick_line_color = None
+	p.yaxis.major_label_text_font_size  = '0pt'
+	p.x_range=Range1d(0, df_combined['episode_number'].max()*1.1)
+	labels = LabelSet(x='episode_number', y='show', 
+						text='show', level='glyph', source=source, 
+						text_font_size='10pt', text_font_style='bold',
+						x_offset=20, y_offset=-len('show')-25, angle=math.pi/2)
+	p.add_layout(labels)
 
 	# Data points
 	show_1_episodes = df_combined['episode_number'].iloc[0]

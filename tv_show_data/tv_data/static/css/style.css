@@ -121,6 +121,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   .fh5co-nav #fh5co-logo {
     font-size: 22px;
+    text-align: left;
   }
 }
 .fh5co-nav a {
@@ -1454,4 +1455,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .bokeh-chart {
   height: 50vh;
+}
+
+#redirection-message {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.4
 }
