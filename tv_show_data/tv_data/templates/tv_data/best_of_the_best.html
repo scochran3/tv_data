@@ -59,13 +59,13 @@
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-9 col-xs-12 bokeh-chart">
-		{{bestOfTheBestTopSeasons.div|safe}}
-		{{bestOfTheBestTopSeasons.script|safe}}
-	</div>
-	<div class="col-lg-3 col-xs-12">
+	<div class="col-lg-3 col-lg-push-9 col-xs-12">
 		<h2 class="chart-header">Best Seasons</h2>
 		<p>I personally think the best season of any TV show is The Wire Season 4, but what about everyone else? This chart shows the top ten seasons by rating according to IMDB. Note that we don't include incomplete seasons.</p>
+	</div>
+	<div class="col-lg-9 col-lg-pull-3 col-xs-12 bokeh-chart">
+		{{bestOfTheBestTopSeasons.div|safe}}
+		{{bestOfTheBestTopSeasons.script|safe}}
 	</div>
 </div>
 <div class="row animate-box chart-section">
@@ -79,13 +79,13 @@
 	</div>
 </div>
 <div class="row animate-box chart-section">
-	<div class="col-lg-9 col-xs-12 bokeh-chart">
-		{{bestOfTheBestMostPopularEpisodes.div|safe}}
-		{{bestOfTheBestMostPopularEpisodes.script|safe}}
-	</div>
-	<div class="col-lg-3 col-xs-12">
+	<div class="col-lg-3 col-lg-push-9 col-xs-12">
 		<h2 class="chart-header">Most Popular Episodes</h2>
 		<p>One measure of popularity is how many different people rated the episode. This chart shows the ten episodes of TV that have the most ratings across all shows and seasons.</p>
+	</div>
+	<div class="col-lg-9 col-lg-pull-3 col-xs-12 bokeh-chart">
+		{{bestOfTheBestMostPopularEpisodes.div|safe}}
+		{{bestOfTheBestMostPopularEpisodes.script|safe}}
 	</div>
 </div>
 
