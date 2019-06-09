@@ -1465,12 +1465,16 @@ h1, h2, h3, h4, h5, h6, figure {
   line-height: 1.6
 }
 
-.bokeh-chart-bar {
+.bokeh-chart-bar-10 {
+  height: 80vh;
+}
+
+.bokeh-chart-bar-5 {
   height: 65vh;
 }
 
 .bokeh-chart {
-  height: 50vh;
+  height: 60vh;
 }
 
 
