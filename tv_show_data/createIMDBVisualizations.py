@@ -548,8 +548,8 @@ def compareTopEpisodes(df1, df2):
 
 	labels_ratings = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=show1_source, 
-						text_font_size='12pt', text_font_style='bold',
-						x_offset=8, y_offset=-7)
+						text_font_size='10pt', text_font_style='bold',
+						x_offset=3, y_offset=-7)
 
 	labels_titles = LabelSet(x=0, y='episode_title', 
 						text='episode_title', level='glyph', source=show1_source, 
@@ -570,12 +570,12 @@ def compareTopEpisodes(df1, df2):
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=show2_source, 
 						text_font_size='10pt', text_font_style='bold',
-						x_offset=8, y_offset=-7)
+						x_offset=3, y_offset=-7)
 
 	labels_titles = LabelSet(x=0, y='episode_title', 
 						text='episode_title', level='glyph', source=show2_source, 
-						text_font_size='12pt', text_font_style='bold',
-						x_offset=3, y_offset=10)
+						text_font_size='10pt', text_font_style='bold',
+						x_offset=0, y_offset=10)
 	p2.add_layout(labels)
 	p2.add_layout(labels_titles)
 
