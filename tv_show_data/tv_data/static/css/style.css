@@ -118,6 +118,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .fh5co-nav #fh5co-logo a:hover {
   color: #000;
@@ -146,7 +147,6 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   list-style: none;
   display: inline;
-  font-weight: bold;
 }
 .fh5co-nav ul li a {
   font-size: 18px;
@@ -1464,9 +1464,15 @@ h1, h2, h3, h4, h5, h6, figure {
 #length-of-show-stat {
   line-height: 1.6
 }
-.bokeh-chart {
-  height: 60vh;
+
+.bokeh-chart-bar {
+  height: 65vh;
 }
+
+.bokeh-chart {
+  height: 50vh;
+}
+
 
 #redirection-message {
   text-transform: uppercase;
