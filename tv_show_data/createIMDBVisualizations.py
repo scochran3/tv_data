@@ -242,7 +242,7 @@ def highestLowestRatedEpisodes(df):
 	# Top chart
 	source_highest = ColumnDataSource(highest_rated)
 	p_highest = figure(y_range=highest_rated['episode_title'], sizing_mode='stretch_both', tools=[])
-	p_highest.hbar(y='episode_title', right='rating', height=.5, color='#191970', source=source_highest)
+	p_highest.hbar(y='episode_title', right='rating', height=.4, color='#191970', source=source_highest)
 	labels_scores = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source_highest, 
 						text_font_size='10pt', text_font_style='bold',
@@ -252,14 +252,14 @@ def highestLowestRatedEpisodes(df):
 	labels_episode_titles = LabelSet(x=0, y='episode_title', 
 						text='episode_title', level='glyph', source=source_highest, 
 						text_font_size='12pt', text_font_style='bold',
-						x_offset=0, y_offset=30)
+						x_offset=0, y_offset=25)
 	p_highest.add_layout(labels_episode_titles)
 	
 
 	# Bottom Chart
 	source_lowest = ColumnDataSource(lowest_rated)
 	p_lowest = figure(y_range=lowest_rated['episode_title'], sizing_mode='stretch_both', tools=[])
-	p_lowest.hbar(y='episode_title', right='rating', height=.5, color='#8B0000', source=source_lowest)
+	p_lowest.hbar(y='episode_title', right='rating', height=.4, color='#8B0000', source=source_lowest)
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source_lowest, 
 						text_font_size='10pt', text_font_style='bold',
@@ -269,7 +269,7 @@ def highestLowestRatedEpisodes(df):
 	labels_episode_titles = LabelSet(x=0, y='episode_title', 
 						text='episode_title', level='glyph', source=source_lowest, 
 						text_font_size='12pt', text_font_style='bold',
-						x_offset=0, y_offset=30)
+						x_offset=0, y_offset=25)
 	p_lowest.add_layout(labels_episode_titles)
 
 	# Style the charts
