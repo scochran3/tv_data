@@ -1427,6 +1427,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .poster-image {
   border-radius: 25px;
+  padding: 15px;
+  margin: 10px;
 }
 
 .tooltip-section {
