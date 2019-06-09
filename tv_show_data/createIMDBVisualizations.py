@@ -600,7 +600,7 @@ def bestOfTheBestTopShows(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['show'], tools=[])
-	p.hbar(y="show", height=.4, right="rating", color="#8B0000", source=source)
+	p.hbar(y="show", height=.35, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='rating', y='show', 
@@ -636,7 +636,7 @@ def bestOfTheBestTopSeasons(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['season-show'], tools=[])
-	p.hbar(y="season-show", height=.4, right="rating", color="#191970", source=source)
+	p.hbar(y="season-show", height=.35, right="rating", color="#191970", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='rating', y='season-show', 
@@ -671,18 +671,18 @@ def bestOfTheBestTopEpisodes(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'], tools=[])
-	p.hbar(y="episode_title", height=.4, right="rating", color="#8B0000", source=source)
+	p.hbar(y="episode_title", height=.35, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source, 
-						text_font_size='10pt', text_font_style='bold',
+						text_font_size='12pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
 	p.add_layout(labels)
 
 	labels_episode_titles = LabelSet(x=0, y='episode_title', 
 						text='episode_title', level='glyph', source=source, 
-						text_font_size='12pt', text_font_style='bold',
+						text_font_size='10pt', text_font_style='bold',
 						x_offset=3, y_offset=10)
 	p.add_layout(labels)
 	p.add_layout(labels_episode_titles)
@@ -707,7 +707,7 @@ def bestOfTheBestMostPopularEpisodes(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'], tools=[])
-	p.hbar(y="episode_title", height=.4, right="number_of_ratings", color="#191970", source=source)
+	p.hbar(y="episode_title", height=.35, right="number_of_ratings", color="#191970", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='number_of_ratings', y='episode_title', 
