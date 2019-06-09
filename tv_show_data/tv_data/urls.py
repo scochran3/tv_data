@@ -8,5 +8,5 @@ urlpatterns = [
     path('show-comparer/', views.show_comparer, name='show_comparer'),
     path('show-comparer/<show1>-vs-<show2>', views.show_comparer_shows, name='show_comparer_shows'),
     path('best-of-the-best', views.best_of_the_best, name='best_of_the_best'),
-    path('about-us', views.about_us, name='about_us')
+    path('about-tv-datatron-3000', views.about_us, name='about_us')
 ]
