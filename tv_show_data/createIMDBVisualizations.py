@@ -243,12 +243,18 @@ def highestLowestRatedEpisodes(df):
 	source_highest = ColumnDataSource(highest_rated)
 	p_highest = figure(y_range=highest_rated['episode_title'], sizing_mode='stretch_both', tools=[])
 	p_highest.hbar(y='episode_title', right='rating', height=.5, color='#191970', source=source_highest)
-	labels = LabelSet(x='rating', y='episode_title', 
+	labels_scores = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source_highest, 
 						text_font_size='10pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
-	p_highest.add_layout(labels)
-	p_highest.x_range=Range1d(0, highest_rated['rating'].max()*1.1)
+	p_highest.add_layout(labels_scores)
+
+	labels_episode_titles = LabelSet(x=0, y='episode_title', 
+						text='episode_title', level='glyph', source=source_highest, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=0, y_offset=30)
+	p_highest.add_layout(labels_episode_titles)
+	
 
 	# Bottom Chart
 	source_lowest = ColumnDataSource(lowest_rated)
@@ -259,22 +265,24 @@ def highestLowestRatedEpisodes(df):
 						text_font_size='10pt', text_font_style='bold',
 						x_offset=8, y_offset=-7, text_font='Work Sans')
 	p_lowest.add_layout(labels)
-	p_lowest.x_range=Range1d(0, lowest_rated['rating'].max()*1.1)
+
+	labels_episode_titles = LabelSet(x=0, y='episode_title', 
+						text='episode_title', level='glyph', source=source_lowest, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=0, y_offset=30)
+	p_lowest.add_layout(labels_episode_titles)
 
 	# Style the charts
 	p_highest.xaxis.visible = False
 	p_highest.yaxis.axis_line_color = None
 	p_highest.yaxis.major_tick_line_color = None
-	p_highest.yaxis.major_label_text_font_style = 'bold'
-	p_highest.yaxis.major_label_text_font_size = '12pt'
-	p_highest.yaxis.major_label_text_font = 'Work Sans'
+	p_highest.x_range=Range1d(0, highest_rated['rating'].max()*1.1)
+	p_highest.yaxis.major_label_text_font_size = '0pt'
 	p_lowest.xaxis.visible = False
 	p_lowest.yaxis.axis_line_color = None
 	p_lowest.yaxis.major_tick_line_color = None
-	p_lowest.yaxis.major_label_text_font_style = 'bold'
-	p_lowest.yaxis.major_label_text_font_size = '12pt'
-	p_lowest.yaxis.major_label_text_font = 'Work Sans'
-
+	p_lowest.x_range=Range1d(0, lowest_rated['rating'].max()*1.1)
+	p_lowest.yaxis.major_label_text_font_size = '0pt'
 
 	# Return the figure
 	script_high, div_high = components(p_highest)
@@ -345,6 +353,7 @@ def compareOverallRating(df1, df2):
 	df2_rating = df2.groupby('show')[['rating']].mean().reset_index()
 	df_combined = df1_rating.append(df2_rating)
 	df_combined['color'] = ['#8B0000', '#191970']
+	df_combined['rating_rounded'] = round(df_combined['rating'], 2)
 
 	# Create plot
 	source = ColumnDataSource(df_combined)
@@ -352,10 +361,9 @@ def compareOverallRating(df1, df2):
 	p.hbar(y='show', right='rating', height=.5, source=source, color='color')
 
 	# Style the plot
-	p.xaxis.axis_label = 'Average Rating Per Episode'
-	p.yaxis.major_tick_line_color = None
-	p.yaxis.major_label_text_font_size  = '0pt'
-	p.x_range=Range1d(0, 10.5)
+	p.yaxis.visible=False
+	p.xaxis.visible=False
+	p.x_range = Range1d(0, df_combined['rating'].max()*1.1)
 
 	# Data points
 	show_1_rating = round(df_combined['rating'].iloc[0], 2)
@@ -364,10 +372,16 @@ def compareOverallRating(df1, df2):
 	show_2_number_of_episodes = df2['episode_number'].max()
 
 	labels = LabelSet(x='rating', y='show', 
-						text='show', level='glyph', source=source, 
-						text_font_size='10pt', text_font_style='bold',
-						x_offset=20, y_offset=-len('show')-25, angle=math.pi/2)
+						text='rating_rounded', level='glyph', source=source, 
+						text_font_size='13pt', text_font_style='bold',
+						x_offset=20, y_offset=-10, angle=math.pi/2)
 	p.add_layout(labels)
+
+	labels_show_title = LabelSet(x=0, y='show', 
+						text='show', level='glyph', source=source, 
+						text_font_size='14pt', text_font_style='bold',
+						x_offset=3, y_offset=65)
+	p.add_layout(labels_show_title)
 
 	# Return the figure
 	script, div = components(p)
@@ -394,9 +408,9 @@ def compareSeasons(df1, df2):
 	source1, source2 = ColumnDataSource(df1_by_season), ColumnDataSource(df2_by_season)
 	p = figure(sizing_mode='stretch_both', tools=[])
 	p.line(x='season', y='rating', line_width=2, source=source1, name=df1['show'].iloc[0], legend=df1['show'].iloc[0], color='#8B0000')
-	p.circle(x='season', y='rating', size=15, source=source1, name=df1['show'].iloc[0], legend=df1['show'].iloc[0], color='#8B0000')
+	p.circle(x='season', y='rating', size=10, source=source1, name=df1['show'].iloc[0], legend=df1['show'].iloc[0], color='#8B0000')
 	p.line(x='season', y='rating', line_width=2, source=source2, name=df2['show'].iloc[0], legend=df2['show'].iloc[0], color='#191970')
-	p.circle(x='season', y='rating', size=15, source=source2, name=df2['show'].iloc[0], legend=df2['show'].iloc[0], color='#191970')
+	p.circle(x='season', y='rating', size=10, source=source2, name=df2['show'].iloc[0], legend=df2['show'].iloc[0], color='#191970')
 
 	# Style the plot
 	p.y_range = Range1d(0, 10)
@@ -434,15 +448,21 @@ def compareNumberOfEpisodes(df1, df2):
 	p.hbar(y='show', right='episode_number', height=.5, source=source, color='color')
 
 	# Style the plot
-	p.xaxis.axis_label = 'Average Rating Per Episode'
-	p.yaxis.major_tick_line_color = None
-	p.yaxis.major_label_text_font_size  = '0pt'
+	p.xaxis.visible = False
+	p.yaxis.visible = False
 	p.x_range=Range1d(0, df_combined['episode_number'].max()*1.1)
+
 	labels = LabelSet(x='episode_number', y='show', 
-						text='show', level='glyph', source=source, 
-						text_font_size='10pt', text_font_style='bold',
-						x_offset=20, y_offset=-len('show')-25, angle=math.pi/2)
+						text='episode_number', level='glyph', source=source, 
+						text_font_size='13pt', text_font_style='bold',
+						x_offset=20, y_offset=-10, angle=math.pi/2)
 	p.add_layout(labels)
+
+	labels_show_title = LabelSet(x=0, y='show', 
+						text='show', level='glyph', source=source, 
+						text_font_size='14pt', text_font_style='bold',
+						x_offset=3, y_offset=65)
+	p.add_layout(labels_show_title)
 
 	# Data points
 	show_1_episodes = df_combined['episode_number'].iloc[0]
@@ -519,31 +539,45 @@ def compareTopEpisodes(df1, df2):
 	# Create the first figure
 	show1_source, show2_source = ColumnDataSource(df1_top_shows), ColumnDataSource(df2_top_shows)
 	p1 = figure(sizing_mode="stretch_both", y_range=df1_top_shows["episode_title"], tools=[])
-	p1.hbar(y="episode_title", right="rating", height=.5, color="#8B0000", source=show1_source)
-	labels = LabelSet(x='rating', y='episode_title', 
+	p1.hbar(y="episode_title", right="rating", height=.4, color="#8B0000", source=show1_source)
+
+	# Style the chart
+	p1.x_range=Range1d(0,11)
+	p1.xaxis.visible = False
+	p1.yaxis.visible = False
+
+	labels_ratings = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=show1_source, 
 						text_font_size='12pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
-	p1.add_layout(labels)
-	p1.x_range=Range1d(0,11)
-	p1.xaxis.visible=False
-	p1.yaxis.axis_line_color = None
-	p1.yaxis.major_tick_line_color = None
-	p1.yaxis.major_label_text_font_style = 'bold'
+
+	labels_titles = LabelSet(x=0, y='episode_title', 
+						text='episode_title', level='glyph', source=show1_source, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=3, y_offset=10)
+
+	p1.add_layout(labels_ratings)
+	p1.add_layout(labels_titles)
+
 
 	# Create the second figure
 	p2 = figure(sizing_mode="stretch_both", y_range=df2_top_shows["episode_title"], tools=[])
-	p2.hbar(y="episode_title", right="rating", height=.5, color="#191970", source=show2_source)
+	p2.hbar(y="episode_title", right="rating", height=.4, color="#191970", source=show2_source)
+	p2.x_range=Range1d(0,11)
+	p2.xaxis.visible = False
+	p2.yaxis.visible = False
+
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=show2_source, 
 						text_font_size='12pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
+
+	labels_titles = LabelSet(x=0, y='episode_title', 
+						text='episode_title', level='glyph', source=show2_source, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=3, y_offset=10)
 	p2.add_layout(labels)
-	p2.x_range=Range1d(0,11)
-	p2.xaxis.visible=False
-	p2.yaxis.axis_line_color = None
-	p2.yaxis.major_tick_line_color = None
-	p2.yaxis.major_label_text_font_style = 'bold'
+	p2.add_layout(labels_titles)
 
 	# Return the figure
 	script1, div1 = components(p1)
@@ -566,7 +600,7 @@ def bestOfTheBestTopShows(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['show'], tools=[])
-	p.hbar(y="show", height=.5, right="rating", color="#8B0000", source=source)
+	p.hbar(y="show", height=.4, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='rating', y='show', 
@@ -574,11 +608,16 @@ def bestOfTheBestTopShows(df):
 						text_font_size='12pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
 	p.add_layout(labels)
+
+	labels_show_title = LabelSet(x=0, y='show', 
+						text='show', level='glyph', source=source, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=3, y_offset=10)
+	p.add_layout(labels_show_title)
+
 	p.x_range=Range1d(0,11)
-	p.xaxis.visible=False
-	p.yaxis.axis_line_color = None
-	p.yaxis.major_tick_line_color = None
-	p.yaxis.major_label_text_font_style = 'bold'
+	p.xaxis.visible = False
+	p.yaxis.visible = False
 	
 	# Return the figure
 	script, div = components(p)
@@ -597,7 +636,7 @@ def bestOfTheBestTopSeasons(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['season-show'], tools=[])
-	p.hbar(y="season-show", height=.5, right="rating", color="#191970", source=source)
+	p.hbar(y="season-show", height=.4, right="rating", color="#191970", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='rating', y='season-show', 
@@ -605,11 +644,16 @@ def bestOfTheBestTopSeasons(df):
 						text_font_size='12pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
 	p.add_layout(labels)
+
+	labels = LabelSet(x=0, y='season-show', 
+						text='season-show', level='glyph', source=source, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=3, y_offset=10)
+	p.add_layout(labels)
+
 	p.x_range=Range1d(0,11)
-	p.xaxis.visible=False
-	p.yaxis.axis_line_color = None
-	p.yaxis.major_tick_line_color = None
-	p.yaxis.major_label_text_font_style = 'bold'
+	p.xaxis.visible = False
+	p.yaxis.visible = False
 	
 	# Return the figure
 	script, div = components(p)
@@ -627,7 +671,7 @@ def bestOfTheBestTopEpisodes(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'], tools=[])
-	p.hbar(y="episode_title", height=.5, right="rating", color="#8B0000", source=source)
+	p.hbar(y="episode_title", height=.4, right="rating", color="#8B0000", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='rating', y='episode_title', 
@@ -635,11 +679,16 @@ def bestOfTheBestTopEpisodes(df):
 						text_font_size='12pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
 	p.add_layout(labels)
+
+	labels_episode_titles = LabelSet(x=0, y='episode_title', 
+						text='episode_title', level='glyph', source=source, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=3, y_offset=10)
+	p.add_layout(labels)
+	p.add_layout(labels_episode_titles)
 	p.x_range=Range1d(0,11)
 	p.xaxis.visible=False
-	p.yaxis.axis_line_color = None
-	p.yaxis.major_tick_line_color = None
-	p.yaxis.major_label_text_font_style = 'bold'
+	p.yaxis.visible = False
 	
 	# Return the figure
 	script, div = components(p)
@@ -658,7 +707,7 @@ def bestOfTheBestMostPopularEpisodes(df):
 	# Create the figure
 	source = ColumnDataSource(df)
 	p = figure(sizing_mode='stretch_both', y_range=df['episode_title'], tools=[])
-	p.hbar(y="episode_title", height=.5, right="number_of_ratings", color="#191970", source=source)
+	p.hbar(y="episode_title", height=.4, right="number_of_ratings", color="#191970", source=source)
 
 	# Format the chart
 	labels = LabelSet(x='number_of_ratings', y='episode_title', 
@@ -666,11 +715,18 @@ def bestOfTheBestMostPopularEpisodes(df):
 						text_font_size='10pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
 	p.add_layout(labels)
+
+	labels_episode_titles = LabelSet(x=0, y='episode_title', 
+						text='episode_title', level='glyph', source=source, 
+						text_font_size='12pt', text_font_style='bold',
+						x_offset=3, y_offset=10)
+	p.add_layout(labels)
+	p.add_layout(labels_episode_titles)
+
+
 	p.x_range=Range1d(0,df['number_of_ratings'].max()*1.3)
 	p.xaxis.visible=False
-	p.yaxis.axis_line_color = None
-	p.yaxis.major_tick_line_color = None
-	p.yaxis.major_label_text_font_style = 'bold'
+	p.yaxis.visible = False
 	
 	# Return the figure
 	script, div = components(p)
@@ -704,4 +760,4 @@ def bestOfTheBestRatingsOverTime(df):
 	return {'script': script, 'div': div}
 
 if __name__ == '__main__':
-	bestOfTheBestTopEpisodes(df=pd.read_csv('episodes.csv'))
+	highestLowestRatedEpisodes(df=pd.read_csv('seinfeld.csv'))

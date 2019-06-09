@@ -45,6 +45,8 @@ def view_show(request, show_title):
 	episodes_df['rating'] = episodes_df['rating'].astype(float)
 	episodes_df = episodes_df.sort_values(by='episode_number', ascending=True)
 
+	episodes_df.to_csv('seinfeld.csv')
+
 	# Create Charts
 	numberOfRatingsOverTime = createIMDBVisualizations.plotNumberOfRatingsOverTime(episodes_df)
 	episodeRatingsOverTime = createIMDBVisualizations.plotEpisodeRatingsOverTime(episodes_df)

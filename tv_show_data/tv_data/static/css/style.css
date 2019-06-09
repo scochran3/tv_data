@@ -1385,6 +1385,10 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 150px;
 }
 
+.chart-header {
+  font-weight: bold;
+}
+
 .first-chart-section {
   margin-top: 50px;
 }
@@ -1460,7 +1464,7 @@ h1, h2, h3, h4, h5, h6, figure {
   line-height: 1.6
 }
 .bokeh-chart {
-  height: 50vh;
+  height: 60vh;
 }
 
 #redirection-message {
