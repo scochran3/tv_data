@@ -16,7 +16,7 @@
 </div>
 <div class="row animate-box">
 	<form method="GET" enctype="multipart/form-data">
-	<div class="col-lg-6">
+	<div class="col-lg-6 split-cols">
 		<h2>Show #1</h2>
 		<select required name="show1" oninvalid="this.setCustomValidity('You must select a first show')" oninput="setCustomValidity('')">
   			<option value="">--- Select A Show ---</option>
@@ -25,7 +25,7 @@
 			{% endfor %}
 		</select>
 	</div>
-	<div class="col-lg-6">
+	<div class="col-lg-6 split-cols">
 		<h2>Show #2</h2>
 		<select required name="show2" oninvalid="this.setCustomValidity('You must select a second show')" oninput="setCustomValidity('')">
   			<option value="">--- Select A Show ---</option>

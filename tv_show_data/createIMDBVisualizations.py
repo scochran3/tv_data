@@ -165,9 +165,9 @@ def plotRatingsPerSeason(df):
 	source = ColumnDataSource(df_grouped)
 	p = figure(sizing_mode='stretch_both', tools=[])
 	p.line(x='season', y='rating', line_width=3, line_color='#8B0000', source=source)
-	p.circle(x='season', y='rating', size=15, 
+	p.circle(x='season', y='rating', size=10, 
 			line_color='#8B0000', fill_color='#FFFFFF', hover_color='#A9A9A9', 
-			hover_line_color='#000000', line_width=5, source=source)
+			hover_line_color='#000000', line_width=3, source=source)
 
 	# Format plot
 	p.xaxis.axis_label = 'Season Number'
@@ -374,13 +374,13 @@ def compareOverallRating(df1, df2):
 	labels = LabelSet(x='rating', y='show', 
 						text='rating_rounded', level='glyph', source=source, 
 						text_font_size='13pt', text_font_style='bold',
-						x_offset=20, y_offset=-10, angle=math.pi/2)
+						x_offset=20, y_offset=-14, angle=math.pi/2)
 	p.add_layout(labels)
 
 	labels_show_title = LabelSet(x=0, y='show', 
 						text='show', level='glyph', source=source, 
 						text_font_size='14pt', text_font_style='bold',
-						x_offset=3, y_offset=85)
+						x_offset=3, y_offset=40)
 	p.add_layout(labels_show_title)
 
 	# Return the figure
@@ -455,13 +455,13 @@ def compareNumberOfEpisodes(df1, df2):
 	labels = LabelSet(x='episode_number', y='show', 
 						text='episode_number', level='glyph', source=source, 
 						text_font_size='13pt', text_font_style='bold',
-						x_offset=20, y_offset=-10, angle=math.pi/2)
+						x_offset=20, y_offset=-14, angle=math.pi/2)
 	p.add_layout(labels)
 
 	labels_show_title = LabelSet(x=0, y='show', 
 						text='show', level='glyph', source=source, 
 						text_font_size='14pt', text_font_style='bold',
-						x_offset=3, y_offset=85)
+						x_offset=3, y_offset=40)
 	p.add_layout(labels_show_title)
 
 	# Data points

@@ -43,7 +43,7 @@ def getShowIMBDID(show):
 	return imbd_id, total_seasons, released, rated, poster, runtime
 
 
-def getEpisodesData(show):
+def getEpisodesData(show, first_season_to_scrape=1):
 
 	# Slugified show
 	show_slugged = show.replace(' ', '_').lower()
@@ -56,11 +56,9 @@ def getEpisodesData(show):
 
 	# Loop over seasons and pull data
 	all_titles, all_ratings, all_air_dates, all_number_of_ratings, all_episode_id, all_season_numbers = [], [], [], [], [], []
-	for i in range(1,number_of_seasons+1):
+	for i in range(first_season_to_scrape, number_of_seasons+1):
 		endpoint = 'https://www.imdb.com/title/{}/episodes?season={}'.format(imdb_id, i)
 		r = requests_retry_session().get(endpoint)
-		print (i)
-		print ('-----------------')
 		soup = BeautifulSoup(r.content, 'html.parser')
 
 		# Parse the website

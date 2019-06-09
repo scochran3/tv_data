@@ -18,11 +18,11 @@
 <div class="row animate-box">
 	<div class='col-lg-12'>
 		<h6 class="breadcrumb-trail"><a href="{% url 'index' %}">Home</a> > <a href="{% url 'show_comparer' %}">Show Comparer</a> > {{show1}} vs. {{show2}}</h6>
-		<h3>Change Shows</h3>
+		<h2>Change Shows</h2>
 	</div>
-	<div class="col-lg-6">
+	<div class="col-lg-6 split-cols">
 		<form method="GET" enctype="multipart/form-data">
-		<h4>Show #1</h4>
+		<h3>Show #1</h3>
 		<select required name="show1" oninvalid="this.setCustomValidity('You must select a second show')" oninput="setCustomValidity('')">
   			<option value="">--- Select A Show ---</option>
 			{% for show in shows %}
@@ -30,8 +30,8 @@
 			{% endfor %}
 		</select>
 	</div>
-	<div class="col-lg-6">
-		<h4>Show #2</h4>
+	<div class="col-lg-6 split-cols">
+		<h3>Show #2</h3>
 		<select required name="show2" oninvalid="this.setCustomValidity('You must select a second show')" oninput="setCustomValidity('')">
   			<option value="">--- Select A Show ---</option>
 			{% for show in shows %}
@@ -63,7 +63,7 @@
 		<h2 class="chart-header">Overall Rating</h2>
 		<p>{{show1.title}}, over the course of {{compareOverallRating.show_1_number_of_episodes}} episodes, has an average rating of {{compareOverallRating.show_1_rating}}. {{show2.title}}, which has a total of {{compareOverallRating.show_2_number_of_episodes}} episodes, has an average rating of {{compareOverallRating.show_2_rating}}.</p>
 	</div>
-	<div class="col-lg-8 col-xs-12 bokeh-chart">
+	<div class="col-lg-8 col-xs-12 bokeh-chart-2">
 		{{compareOverallRating.div|safe}}
 		{{compareOverallRating.script|safe}}
 	</div>
@@ -88,7 +88,7 @@
 		<h2 class="chart-header">Number Of Episodes</h2>
 		<p>{{show1.title}} has a total of {{numberOfEpisodes.show_1_episodes}} episodes and {{show2.title}} has a total of {{numberOfEpisodes.show_2_episodes}} episodes.</p>
 	</div>
-	<div class="col-lg-8 col-xs-12 bokeh-chart">
+	<div class="col-lg-8 col-xs-12 bokeh-chart-2">
 		{{numberOfEpisodes.div|safe}}
 		{{numberOfEpisodes.script|safe}}
 	</div>
