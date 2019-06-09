@@ -380,7 +380,7 @@ def compareOverallRating(df1, df2):
 	labels_show_title = LabelSet(x=0, y='show', 
 						text='show', level='glyph', source=source, 
 						text_font_size='14pt', text_font_style='bold',
-						x_offset=3, y_offset=90)
+						x_offset=3, y_offset=85)
 	p.add_layout(labels_show_title)
 
 	# Return the figure
@@ -445,7 +445,7 @@ def compareNumberOfEpisodes(df1, df2):
 	# Create plot
 	source = ColumnDataSource(df_combined)
 	p = figure(sizing_mode='stretch_both', y_range=df_combined['show'], tools=[])
-	p.hbar(y='show', right='episode_number', height=.5, source=source, color='color')
+	p.hbar(y='show', right='episode_number', height=.55, source=source, color='color')
 
 	# Style the plot
 	p.xaxis.visible = False
@@ -461,7 +461,7 @@ def compareNumberOfEpisodes(df1, df2):
 	labels_show_title = LabelSet(x=0, y='show', 
 						text='show', level='glyph', source=source, 
 						text_font_size='14pt', text_font_style='bold',
-						x_offset=3, y_offset=65)
+						x_offset=3, y_offset=85)
 	p.add_layout(labels_show_title)
 
 	# Data points
@@ -553,7 +553,7 @@ def compareTopEpisodes(df1, df2):
 
 	labels_titles = LabelSet(x=0, y='episode_title', 
 						text='episode_title', level='glyph', source=show1_source, 
-						text_font_size='12pt', text_font_style='bold',
+						text_font_size='10pt', text_font_style='bold',
 						x_offset=3, y_offset=10)
 
 	p1.add_layout(labels_ratings)
@@ -569,7 +569,7 @@ def compareTopEpisodes(df1, df2):
 
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=show2_source, 
-						text_font_size='12pt', text_font_style='bold',
+						text_font_size='10pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
 
 	labels_titles = LabelSet(x=0, y='episode_title', 
