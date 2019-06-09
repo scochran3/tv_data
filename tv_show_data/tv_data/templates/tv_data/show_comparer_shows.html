@@ -119,12 +119,12 @@
 		<h2 class="chart-header">Top Episode Comparison</h2>
 		<p>Let's compare the best episodes of {{show1.title}} and {{show2.title}}. Which show has more great episodes? Below you can see the ten highest rated episoes of both shows.
 	</div>
-	<div class="col-lg-6 col-xs-12 bokeh-chart">
+	<div class="col-lg-6 col-xs-12 bokeh-chart-bar-10">
 		<h3><strong>{{show1.title}}</strong></h3>
 		{{compareTopEpisodes.div1|safe}}
 		{{compareTopEpisodes.script1|safe}}
 	</div>
-	<div class="col-lg-6 col-xs-12 bokeh-chart">
+	<div class="col-lg-6 col-xs-12 bokeh-chart-bar-10">
 		<h3 id="show-title"><strong>{{show2.title}}</strong></h3>
 		{{compareTopEpisodes.div2|safe}}
 		{{compareTopEpisodes.script2|safe}}

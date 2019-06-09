@@ -455,7 +455,7 @@ def compareNumberOfEpisodes(df1, df2):
 	labels = LabelSet(x='episode_number', y='show', 
 						text='episode_number', level='glyph', source=source, 
 						text_font_size='13pt', text_font_style='bold',
-						x_offset=20, y_offset=-14, angle=math.pi/2)
+						x_offset=20, y_offset=-12, angle=math.pi/2)
 	p.add_layout(labels)
 
 	labels_show_title = LabelSet(x=0, y='show', 
@@ -485,7 +485,7 @@ def compareNumberOfRatings(df1, df2):
 	
 	# Format the chart
 	p.yaxis.formatter = NumeralTickFormatter(format="0,0")
-	p.yaxis.axis_label = "Number of Ratings"
+	# p.yaxis.axis_label = "Number of Ratings"
 	p.xaxis.axis_label = "Episode Number"
 
 	# Data points
