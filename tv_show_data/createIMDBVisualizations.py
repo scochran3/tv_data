@@ -611,7 +611,7 @@ def bestOfTheBestTopShows(df):
 
 	labels_show_title = LabelSet(x=0, y='show', 
 						text='show', level='glyph', source=source, 
-						text_font_size='12pt', text_font_style='bold',
+						text_font_size='10pt', text_font_style='bold',
 						x_offset=3, y_offset=10)
 	p.add_layout(labels_show_title)
 
@@ -647,7 +647,7 @@ def bestOfTheBestTopSeasons(df):
 
 	labels = LabelSet(x=0, y='season-show', 
 						text='season-show', level='glyph', source=source, 
-						text_font_size='12pt', text_font_style='bold',
+						text_font_size='10pt', text_font_style='bold',
 						x_offset=3, y_offset=10)
 	p.add_layout(labels)
 
@@ -676,7 +676,7 @@ def bestOfTheBestTopEpisodes(df):
 	# Format the chart
 	labels = LabelSet(x='rating', y='episode_title', 
 						text='rating', level='glyph', source=source, 
-						text_font_size='12pt', text_font_style='bold',
+						text_font_size='10pt', text_font_style='bold',
 						x_offset=8, y_offset=-7)
 	p.add_layout(labels)
 
@@ -718,7 +718,7 @@ def bestOfTheBestMostPopularEpisodes(df):
 
 	labels_episode_titles = LabelSet(x=0, y='episode_title', 
 						text='episode_title', level='glyph', source=source, 
-						text_font_size='12pt', text_font_style='bold',
+						text_font_size='10pt', text_font_style='bold',
 						x_offset=3, y_offset=10)
 	p.add_layout(labels)
 	p.add_layout(labels_episode_titles)
