@@ -6,7 +6,7 @@ from django.utils.text import slugify
 from django_pandas.io import read_frame
 import createIMDBVisualizations
 from fuzzywuzzy import fuzz, process
-
+from django.db.models import Max
 
 def index(request):
 
@@ -337,10 +337,48 @@ def checkShow(request):
 	# Check if the string is a typo using fuzzy logic
 	for show in all_shows:
 		if fuzz.ratio(show_title, show.title) > 70 and show.title != show_title:
+
+			# Set redirection notification
 			request.session["redirection"] = 'You entered a show of "{}", but we think you meant {}, so we redirected your search. If this is incorrect please search again.'.format(show_title, show.title)
 			request.session["error"] = None
+
+			# Set show title
 			show_title = show.title
-			return show_title, "Show In Database"
+			this_show = Show.objects.get(title=show_title)
+
+			# Check if seasons in database matches seasons of show
+			number_of_seasons = gatherIMDBData.getShowIMBDID(show_title)[1]
+			number_of_seasons_database = Episode.objects.filter(show=this_show).aggregate(Max('season'))['season__max']
+
+			# If we already have all the seasons
+			if  number_of_seasons == number_of_seasons_database:
+				return show_title, "Show In Database"
+
+			# Otherwise update it
+			else:
+				# Pull data for the show
+				number_of_episodes_already_in_database = len(Episode.objects.filter(show=this_show))
+				episode_data = gatherIMDBData.getEpisodesData(show=show_title, first_season_to_scrape=number_of_seasons_database+1, 
+												number_of_episodes_already_in_database=number_of_episodes_already_in_database)
+
+				episode_data_df = episode_data[0]
+
+				# Create episode objects
+				objects = [Episode(show=this_show, 
+									episode_title=episode_data_df.episode_title.iloc[i], 
+									air_date=episode_data_df.episode_air_date.iloc[i], 
+									rating=episode_data_df.episode_rating.iloc[i], 
+									number_of_ratings=episode_data_df.episode_number_of_ratings.iloc[i], 
+									episode_number=episode_data_df.episode_number.iloc[i], 
+									season=episode_data_df.season_number.iloc[i], 
+									imdb_episode_id=episode_data_df.episode_id.iloc[i])
+							
+							for i in range(len(episode_data_df))]
+
+				Episode.objects.bulk_create(objects)
+
+				# Redirect to new show page 
+				return show_title, "Show Added"
 		
 
 	# If the show is not found
@@ -355,8 +393,42 @@ def checkShow(request):
 
 	# If they show already exists in the database
 	if Show.objects.filter(title=show_title):
-		print ("THIS IS HAPPENING!!!!!!!!!!!!!!!")
+
+		# Set error to nothing
 		request.session["redirection"] = None
+
+		# Filter for the show
+		this_show = Show.objects.get(title=show_title)
+
+		# Check if seasons in database matches seasons of show
+		number_of_seasons = gatherIMDBData.getShowIMBDID(show_title)[1]
+		number_of_seasons_database = Episode.objects.filter(show=this_show).aggregate(Max('season'))['season__max']
+
+		if  number_of_seasons == number_of_seasons_database:
+			return show_title, "Show In Database"
+		else:
+			# Pull data for the show
+			number_of_episodes_already_in_database = len(Episode.objects.filter(show=this_show))
+			episode_data = gatherIMDBData.getEpisodesData(show=show_title, first_season_to_scrape=number_of_seasons_database+1, 
+											number_of_episodes_already_in_database=number_of_episodes_already_in_database)
+			episode_data_df = episode_data[0]
+
+			# Create episode objects
+			objects = [Episode(show=this_show, 
+								episode_title=episode_data_df.episode_title.iloc[i], 
+								air_date=episode_data_df.episode_air_date.iloc[i], 
+								rating=episode_data_df.episode_rating.iloc[i], 
+								number_of_ratings=episode_data_df.episode_number_of_ratings.iloc[i], 
+								episode_number=episode_data_df.episode_number.iloc[i], 
+								season=episode_data_df.season_number.iloc[i], 
+								imdb_episode_id=episode_data_df.episode_id.iloc[i])
+						
+						for i in range(len(episode_data_df))]
+
+			Episode.objects.bulk_create(objects)
+
+			# Redirect to new show page 
+			return show_title, "Show Added"
 		return show_title, "Show In Database"
 
 	# Show not in database

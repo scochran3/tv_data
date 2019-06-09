@@ -43,7 +43,7 @@ def getShowIMBDID(show):
 	return imbd_id, total_seasons, released, rated, poster, runtime
 
 
-def getEpisodesData(show, first_season_to_scrape=1):
+def getEpisodesData(show, first_season_to_scrape=1, number_of_episodes_already_in_database=0):
 
 	# Slugified show
 	show_slugged = show.replace(' ', '_').lower()
@@ -102,7 +102,7 @@ def getEpisodesData(show, first_season_to_scrape=1):
 							'season_number': all_season_numbers})
 
 	df = df.set_index('show')
-	df['episode_number'] = df.reset_index().index+1
+	df['episode_number'] = df.reset_index().index + 1 + number_of_episodes_already_in_database
 
 	return df, imdb_id, released, rated, poster, runtime
 
