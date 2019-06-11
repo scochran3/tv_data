@@ -1469,8 +1469,20 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 80vh;
 }
 
+@media screen and (min-width: 1800px) {
+    .bokeh-chart-bar-10 {
+    height: 55vh;
+    }
+  }
+
 .bokeh-chart-bar-5 {
   height: 65vh;
+}
+
+@media screen and (min-width: 1800px) {
+    .bokeh-chart-bar-5 {
+    height: 40vh;
+  }
 }
 
 .bokeh-chart-2 {
@@ -1498,4 +1510,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .split-cols {
   margin-top: 20px;
+}
+
+th, tr {
+  text-align: center;
 }

@@ -20,10 +20,10 @@ def getShowIMBDID(show):
 		API_KEY  = credentials['imdb']['api_key']
 
 	# Create the endpoint
-	END_POINT = 'http://www.omdbapi.com/?apikey={}&'.format(API_KEY)
+	END_POINT = 'http://www.omdbapi.com/?apikey={}'.format(API_KEY)
 
 	# Make request
-	url = END_POINT + 't={}&r=json'.format(show)
+	url = END_POINT + '&t={}&type=series&r=json'.format(show)
 	r = requests.get(url)
 	data = json.loads(r.content)
 
@@ -127,4 +127,4 @@ def requests_retry_session(
     return session
 
 if __name__=='__main__':
-	getShowIMBDID('The Leftovers')
+	getShowIMBDID('Westworld')

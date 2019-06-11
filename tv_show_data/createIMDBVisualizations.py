@@ -759,5 +759,45 @@ def bestOfTheBestRatingsOverTime(df):
 
 	return {'script': script, 'div': div}
 
+
+def bestOfTheBestBestShowPerYear(df):
+
+	# Convert date and pull air year
+	df['air_date'] = pd.to_datetime(df['air_date'], format='%Y-%m-%d')
+	df['aired_year'] = df['air_date'].dt.year
+
+	# Group by year and show
+	df_grouped = df.groupby(['aired_year', 'show'])[['rating']].mean().reset_index()
+	df_grouped = df_grouped.sort_values(by=['aired_year', 'rating'])
+	best_show_per_year = df_grouped.loc[df_grouped.groupby('aired_year').rating.idxmax()]
+	
+	# Create the table
+	table = """
+				<table class="table" id="table-best-show-per-year" text-align="center">
+					<tr></tr>
+					<thead>
+						<tr>
+							<th align="center" style="background-color: #4CAFCF; color: #000">Year</th>
+							<th style="background-color: #4CAFCF; color: #000">Show</th>
+							<th style="background-color: #4CAFCF; color: #000">Average Rating</th>
+						</tr>
+					</thead>
+					<tbody>
+				"""
+	for i in range(len(best_show_per_year)):
+		table = table + """
+					<tr>
+						<td><strong>{}</strong></td>
+						<td>{}</td>
+						<td>{}</td>
+					</tr>
+					""".format(best_show_per_year['aired_year'].iloc[i],
+								best_show_per_year['show'].iloc[i],
+								round(best_show_per_year['rating'].iloc[i], 2))
+	table += "</tbody></table>"
+
+	return table
+
+
 if __name__ == '__main__':
-	highestLowestRatedEpisodes(df=pd.read_csv('seinfeld.csv'))
+	bestOfTheBestBestShowPerYear(df=pd.read_csv('episodes.csv'))

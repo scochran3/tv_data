@@ -300,12 +300,14 @@ def best_of_the_best(request):
 	bestOfTheBestTopEpisodes = createIMDBVisualizations.bestOfTheBestTopEpisodes(episodes_df)
 	bestOfTheBestMostPopularEpisodes = createIMDBVisualizations.bestOfTheBestMostPopularEpisodes(episodes_df)
 	bestOfTheBestRatingsOverTime = createIMDBVisualizations.bestOfTheBestRatingsOverTime(episodes_df)
+	bestOfTheBestBestShowPerYear = createIMDBVisualizations.bestOfTheBestBestShowPerYear(episodes_df)
 
 	context = {'bestOfTheBestTopShows': bestOfTheBestTopShows,
 				'bestOfTheBestTopSeasons': bestOfTheBestTopSeasons,
 				'bestOfTheBestTopEpisodes': bestOfTheBestTopEpisodes,
 				'bestOfTheBestMostPopularEpisodes': bestOfTheBestMostPopularEpisodes,
-				'bestOfTheBestRatingsOverTime': bestOfTheBestRatingsOverTime}
+				'bestOfTheBestRatingsOverTime': bestOfTheBestRatingsOverTime,
+				'bestOfTheBestBestShowPerYear': bestOfTheBestBestShowPerYear}
 
 	return render(request, 'tv_data/best_of_the_best.html', context)
 
@@ -332,7 +334,7 @@ def checkShow(request):
 	all_shows = Show.objects.all()
 
 	# Get show title input
-	show_title = request.POST.get('show_title').lower().title()
+	show_title = request.POST.get('show_title').lower().title().strip()
 
 	# Check if the string is a typo using fuzzy logic
 	for show in all_shows:
