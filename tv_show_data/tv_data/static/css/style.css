@@ -1515,3 +1515,9 @@ h1, h2, h3, h4, h5, h6, figure {
 th, tr {
   text-align: center;
 }
+
+#broken-tv {
+  border-radius: 10px;
+  margin-left, margin-right: auto;
+  width: 50%;
+}
