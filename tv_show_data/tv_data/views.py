@@ -7,6 +7,7 @@ from django_pandas.io import read_frame
 import createIMDBVisualizations
 from fuzzywuzzy import fuzz, process
 from django.db.models import Max
+from django.template import RequestContext
 
 def index(request):
 
@@ -23,6 +24,9 @@ def index(request):
 		
 	return render(request, 'tv_data/index.html', {})
 
+
+def error(request, exception):
+    return render(request,'tv_data/404.html')
 
 def view_show(request, show_title):
 
