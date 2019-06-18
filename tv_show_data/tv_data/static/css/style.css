@@ -1518,6 +1518,8 @@ th, tr {
 
 #broken-tv {
   border-radius: 10px;
-  margin-left, margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
+  display: block;
 }
