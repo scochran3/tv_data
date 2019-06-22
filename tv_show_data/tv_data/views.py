@@ -15,6 +15,9 @@ def index(request):
 	if request.method == 'POST':
 		show_title, result = checkShow(request)
 
+		print (result)
+		print ('!!!!!!!!!!!!!!!!!!')
+
 		if result == "Show In Database":
 			return redirect('view_show', show_title=slugify(show_title))
 		elif result == "Show Added":
@@ -342,7 +345,7 @@ def checkShow(request):
 
 	# Check if the string is a typo using fuzzy logic
 	for show in all_shows:
-		if fuzz.ratio(show_title, show.title) > 70 and show.title != show_title:
+		if fuzz.ratio(show_title, show.title) > 80 and show.title != show_title:
 
 			# Set redirection notification
 			request.session["redirection"] = 'You entered a show of "{}", but we think you meant {}, so we redirected your search. If this is incorrect please search again.'.format(show_title, show.title)
@@ -439,38 +442,45 @@ def checkShow(request):
 
 	# Show not in database
 	if not Show.objects.filter(title=show_title):
-		# Pull data for the show
-		episode_data = gatherIMDBData.getEpisodesData(show_title)
-		episode_data_df = episode_data[0]
-		imdb_show_id = episode_data[1]
-		release_date = episode_data[2]
-		rated = episode_data[3]
-		poster_url = episode_data[4]
-		runtime = episode_data[5]
 
-		# Create new show
-		new_show = Show.objects.create(
-			title=show_title,
-			imdb_id=episode_data[1],
-			released=release_date,
-			rated=rated,
-			poster_url=poster_url,
-			runtime=runtime
-			)
+		try:
+			# Pull data for the show
+			episode_data = gatherIMDBData.getEpisodesData(show_title)
+			episode_data_df = episode_data[0]
+			imdb_show_id = episode_data[1]
+			release_date = episode_data[2]
+			rated = episode_data[3]
+			poster_url = episode_data[4]
+			runtime = episode_data[5]
 
-		# Create episode objects
-		objects = [Episode(show=new_show, 
-							episode_title=episode_data_df.episode_title.iloc[i], 
-							air_date=episode_data_df.episode_air_date.iloc[i], 
-							rating=episode_data_df.episode_rating.iloc[i], 
-							number_of_ratings=episode_data_df.episode_number_of_ratings.iloc[i], 
-							episode_number=episode_data_df.episode_number.iloc[i], 
-							season=episode_data_df.season_number.iloc[i], 
-							imdb_episode_id=episode_data_df.episode_id.iloc[i])
-					
-					for i in range(len(episode_data_df))]
+			# Create new show
+			new_show = Show.objects.create(
+				title=show_title,
+				imdb_id=episode_data[1],
+				released=release_date,
+				rated=rated,
+				poster_url=poster_url,
+				runtime=runtime
+				)
 
-		Episode.objects.bulk_create(objects)
+			# Create episode objects
+			objects = [Episode(show=new_show, 
+								episode_title=episode_data_df.episode_title.iloc[i], 
+								air_date=episode_data_df.episode_air_date.iloc[i], 
+								rating=episode_data_df.episode_rating.iloc[i], 
+								number_of_ratings=episode_data_df.episode_number_of_ratings.iloc[i], 
+								episode_number=episode_data_df.episode_number.iloc[i], 
+								season=episode_data_df.season_number.iloc[i], 
+								imdb_episode_id=episode_data_df.episode_id.iloc[i])
+						
+						for i in range(len(episode_data_df))]
 
-		# Redirect to new show page 
-		return show_title, "Show Added"
+			Episode.objects.bulk_create(objects)
+
+			# Redirect to new show page 
+			return show_title, "Show Added"
+
+		except AttributeError:
+			request.session["error"] = "Sorry, the show {} was not found. Please try a different show.".format(show_title)
+			request.session["redirection"] = ''
+			return show_title, "Show Not Found"

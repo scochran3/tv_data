@@ -1,174 +1,87 @@
 ,id,show,episode_title,air_date,rating,number_of_ratings,episode_number,season,imdb_episode_id
-172,2760,Seinfeld,"Good News, Bad News",1989-07-05,7.7,2867,1,1,tt0098286
-171,2761,Seinfeld,The Stakeout,1990-05-31,7.7,2231,2,1,tt0697784
-170,2762,Seinfeld,The Robbery,1990-06-07,7.7,2002,3,1,tt0697768
-169,2763,Seinfeld,Male Unbonding,1990-06-14,7.5,2022,4,1,tt0697645
-168,2764,Seinfeld,The Stock Tip,1990-06-21,7.7,1894,5,1,tt0697788
-167,2765,Seinfeld,The Ex-Girlfriend,1991-01-23,7.8,1846,6,2,tt0697692
-166,2766,Seinfeld,The Pony Remark,1991-01-30,8.0,1945,7,2,tt0697757
-165,2767,Seinfeld,The Jacket,1991-02-06,8.4,1875,8,2,tt0697713
-164,2768,Seinfeld,The Phone Message,1991-02-13,8.5,1889,9,2,tt0697751
-163,2769,Seinfeld,The Apartment,1991-04-04,8.0,1692,10,2,tt0697650
-162,2770,Seinfeld,The Statue,1991-04-11,8.2,1688,11,2,tt0697787
-161,2771,Seinfeld,The Revenge,1991-04-18,8.4,1711,12,2,tt0697766
-160,2772,Seinfeld,The Heart Attack,1991-04-25,8.0,1726,13,2,tt0697709
-159,2773,Seinfeld,The Deal,1991-05-02,8.4,1674,14,2,tt0697682
-158,2774,Seinfeld,The Baby Shower,1991-05-16,7.6,1681,15,2,tt0697652
-157,2775,Seinfeld,The Chinese Restaurant,1991-05-23,8.8,2184,16,2,tt0697675
-156,2776,Seinfeld,The Busboy,1991-06-26,7.8,1658,17,2,tt0697664
-155,2777,Seinfeld,The Note,1991-09-18,8.3,1710,18,3,tt0697741
-154,2778,Seinfeld,The Truth,1991-09-25,7.9,1573,19,3,tt0697801
-153,2779,Seinfeld,The Pen,1991-10-02,8.4,1742,20,3,tt0697749
-152,2780,Seinfeld,The Dog,1991-10-09,7.4,1918,21,3,tt0697686
-151,2781,Seinfeld,The Library,1991-10-16,8.7,1944,22,3,tt0697721
-150,2782,Seinfeld,The Parking Garage,1991-10-30,8.9,2265,23,3,tt0697747
-149,2783,Seinfeld,The Cafe,1991-11-06,8.6,1604,24,3,tt0697668
-148,2784,Seinfeld,The Tape,1991-11-13,8.8,1719,25,3,tt0697797
-147,2785,Seinfeld,The Nose Job,1991-11-20,8.1,1602,26,3,tt0697740
-146,2786,Seinfeld,The Stranded,1991-11-27,7.5,1631,27,3,tt0697789
-145,2787,Seinfeld,The Alternate Side,1991-12-04,8.4,1606,28,3,tt0697648
-144,2788,Seinfeld,The Red Dot,1991-12-11,8.5,1646,29,3,tt0697765
-143,2789,Seinfeld,The Subway,1992-01-08,8.9,2038,30,3,tt0697792
-142,2790,Seinfeld,The Pez Dispenser,1992-01-15,8.6,1647,31,3,tt0697750
-141,2791,Seinfeld,The Suicide,1992-01-29,7.7,1472,32,3,tt0697793
-140,2792,Seinfeld,The Fix Up,1992-02-05,8.5,1605,33,3,tt0697698
-139,2793,Seinfeld,The Boyfriend,1992-02-12,8.9,2091,34,3,tt0697738
-138,2794,Seinfeld,The Boyfriend,1992-02-12,8.8,1670,35,3,tt0795272
-137,2795,Seinfeld,The Limo,1992-02-26,9.0,2254,36,3,tt0697722
-136,2796,Seinfeld,The Good Samaritan,1992-03-04,8.1,1463,37,3,tt0697704
-135,2797,Seinfeld,The Letter,1992-03-25,8.1,1438,38,3,tt0697720
-134,2798,Seinfeld,The Parking Space,1992-04-22,8.4,1538,39,3,tt0697748
-133,2799,Seinfeld,The Keys,1992-05-06,8.5,1502,40,3,tt0697717
-132,2800,Seinfeld,The Trip: Part 1,1992-08-12,8.3,1513,41,4,tt0697799
-131,2801,Seinfeld,The Trip: Part 2,1992-08-19,8.5,1526,42,4,tt0697800
-130,2802,Seinfeld,The Pitch,1992-09-16,8.8,1548,43,4,tt0697755
-129,2803,Seinfeld,The Ticket,1992-09-16,8.5,1400,44,4,tt0697798
-128,2804,Seinfeld,The Wallet,1992-09-23,8.2,1392,45,4,tt0697808
-127,2805,Seinfeld,The Watch,1992-09-30,8.2,1382,46,4,tt0697809
-126,2806,Seinfeld,The Bubble Boy,1992-10-07,8.9,2201,47,4,tt0697662
-125,2807,Seinfeld,The Cheever Letters,1992-10-28,8.6,1534,48,4,tt0697673
-124,2808,Seinfeld,The Opera,1992-11-04,8.3,1509,49,4,tt0697743
-123,2809,Seinfeld,The Virgin,1992-11-11,8.3,1433,50,4,tt0697804
-122,2810,Seinfeld,The Contest,1992-11-18,9.6,4139,51,4,tt0697679
-121,2811,Seinfeld,The Airport,1992-11-25,9.0,2081,52,4,tt0697647
-120,2812,Seinfeld,The Pick,1992-12-16,8.6,1557,53,4,tt0697752
-119,2813,Seinfeld,The Movie,1993-01-06,8.3,1452,54,4,tt0697735
-118,2814,Seinfeld,The Visa,1993-01-27,8.3,1372,55,4,tt0697805
-117,2815,Seinfeld,The Shoes,1993-02-04,8.4,1432,56,4,tt0697775
-116,2816,Seinfeld,The Outing,1993-02-11,9.4,2763,57,4,tt0697745
-115,2817,Seinfeld,The Old Man,1993-02-18,8.2,1489,58,4,tt0697742
-114,2818,Seinfeld,The Implant,1993-02-25,8.7,1557,59,4,tt0697711
-113,2819,Seinfeld,The Junior Mint,1993-03-17,8.9,1962,60,4,tt0697715
-112,2820,Seinfeld,The Smelly Car,1993-04-15,8.6,1506,61,4,tt0697778
-111,2821,Seinfeld,The Handicap Spot,1993-05-13,8.5,1387,62,4,tt0697708
-110,2822,Seinfeld,The Pilot,1993-05-20,8.8,1605,63,4,tt0697754
-109,2823,Seinfeld,The Mango,1993-09-16,8.7,1579,64,5,tt0697728
-108,2824,Seinfeld,The Puffy Shirt,1993-09-23,9.0,2126,65,5,tt0697762
-107,2825,Seinfeld,The Glasses,1993-09-30,8.5,1450,66,5,tt0697703
-106,2826,Seinfeld,The Sniffing Accountant,1993-10-07,8.3,1419,67,5,tt0697779
-105,2827,Seinfeld,The Bris,1993-10-14,8.2,1511,68,5,tt0697661
-104,2828,Seinfeld,The Lip Reader,1993-10-28,8.6,1440,69,5,tt0697723
-103,2829,Seinfeld,The Non-Fat Yogurt,1993-11-04,8.6,1691,70,5,tt0697739
-102,2830,Seinfeld,The Barber,1993-11-11,8.4,1445,71,5,tt0697653
-101,2831,Seinfeld,The Masseuse,1993-11-18,8.0,1337,72,5,tt0697730
-100,2832,Seinfeld,The Cigar Store Indian,1993-12-09,8.5,1531,73,5,tt0697677
-99,2833,Seinfeld,The Conversion,1993-12-16,8.3,1356,74,5,tt0697680
-98,2834,Seinfeld,The Stall,1994-01-06,8.7,1558,75,5,tt0697785
-97,2835,Seinfeld,The Dinner Party,1994-02-03,8.4,1371,76,5,tt0697684
-96,2836,Seinfeld,The Marine Biologist,1994-02-10,9.3,2583,77,5,tt0697729
-95,2837,Seinfeld,The Pie,1994-02-17,8.6,1432,78,5,tt0697753
-94,2838,Seinfeld,The Stand-In,1994-02-24,7.9,1332,79,5,tt0697786
-93,2839,Seinfeld,The Wife,1994-03-17,8.2,1327,80,5,tt0697810
-92,2840,Seinfeld,The Raincoats,1994-04-28,8.6,1378,81,5,tt0697764
-91,2841,Seinfeld,The Fire,1994-05-05,8.8,1555,82,5,tt0697697
-90,2842,Seinfeld,The Hamptons,1994-05-12,9.1,2170,83,5,tt0697707
-89,2843,Seinfeld,The Opposite,1994-05-19,9.6,2973,84,5,tt0697744
-88,2844,Seinfeld,The Chaperone,1994-09-22,8.2,1344,85,6,tt0697671
-87,2845,Seinfeld,The Big Salad,1994-09-29,8.3,1380,86,6,tt0697656
-86,2846,Seinfeld,The Pledge Drive,1994-10-06,8.4,1337,87,6,tt0697756
-85,2847,Seinfeld,The Chinese Woman,1994-10-13,8.3,1317,88,6,tt0697676
-84,2848,Seinfeld,The Couch,1994-10-27,8.3,1305,89,6,tt0697681
-83,2849,Seinfeld,The Gymnast,1994-11-03,8.4,1348,90,6,tt0697706
-82,2850,Seinfeld,The Soup,1994-11-10,8.3,1316,91,6,tt0697781
-81,2851,Seinfeld,The Mom and Pop Store,1994-11-17,8.2,1271,92,6,tt0697733
-80,2852,Seinfeld,The Secretary,1994-12-08,8.2,1251,93,6,tt0697772
-79,2853,Seinfeld,The Race,1994-12-15,9.0,2039,94,6,tt0697763
-78,2854,Seinfeld,The Switch,1995-01-05,9.0,1947,95,6,tt0697796
-77,2855,Seinfeld,The Label Maker,1995-01-19,8.7,1326,96,6,tt0697719
-76,2856,Seinfeld,The Scofflaw,1995-01-26,8.3,1243,97,6,tt0697770
-75,2857,Seinfeld,Highlights of a Hundred,1995-02-02,7.3,1346,98,6,tt0697644
-74,2858,Seinfeld,The Beard,1995-02-09,8.4,1254,99,6,tt0697654
-73,2859,Seinfeld,The Kiss Hello,1995-02-16,8.4,1237,100,6,tt0697718
-72,2860,Seinfeld,The Doorman,1995-02-23,8.5,1315,101,6,tt0697689
-71,2861,Seinfeld,The Jimmy,1995-03-16,9.0,2022,102,6,tt0697714
-70,2862,Seinfeld,The Doodle,1995-04-06,8.5,1222,103,6,tt0697688
-69,2863,Seinfeld,The Fusilli Jerry,1995-04-27,8.9,1723,104,6,tt0697702
-68,2864,Seinfeld,The Diplomat's Club,1995-05-04,8.2,1212,105,6,tt0697685
-67,2865,Seinfeld,The Face Painter,1995-05-11,8.5,1315,106,6,tt0697693
-66,2866,Seinfeld,The Understudy,1995-05-18,8.2,1264,107,6,tt0697802
-65,2867,Seinfeld,The Engagement,1995-09-21,8.7,1356,108,7,tt0697690
-64,2868,Seinfeld,The Postponement,1995-09-28,8.4,1213,109,7,tt0697759
-63,2869,Seinfeld,The Maestro,1995-10-05,8.2,1276,110,7,tt0697726
-62,2870,Seinfeld,The Wink,1995-10-12,8.8,1403,111,7,tt0697812
-61,2871,Seinfeld,The Hot Tub,1995-10-19,8.8,1373,112,7,tt0697710
-60,2872,Seinfeld,The Soup Nazi,1995-11-02,9.6,3582,113,7,tt0697782
-59,2873,Seinfeld,The Secret Code,1995-11-09,8.5,1282,114,7,tt0697771
-58,2874,Seinfeld,The Pool Guy,1995-11-16,8.5,1250,115,7,tt0697758
-57,2875,Seinfeld,The Sponge,1995-12-07,8.5,1332,116,7,tt0697783
-56,2876,Seinfeld,The Gum,1995-12-14,8.8,1492,117,7,tt0697705
-55,2877,Seinfeld,The Rye,1996-01-04,9.0,1741,118,7,tt0697769
-54,2878,Seinfeld,The Caddy,1996-01-25,8.7,1317,119,7,tt0697666
-53,2879,Seinfeld,The Seven,1996-02-01,8.3,1183,120,7,tt0697774
-52,2880,Seinfeld,The Cadillac,1996-02-08,8.6,1338,121,7,tt0697667
-51,2881,Seinfeld,The Shower Head,1996-02-15,8.6,1219,122,7,tt0697776
-50,2882,Seinfeld,The Doll,1996-02-22,8.3,1191,123,7,tt0697687
-49,2883,Seinfeld,The Friars Club,1996-03-07,8.0,1173,124,7,tt0697700
-48,2884,Seinfeld,The Wig Master,1996-04-04,8.3,1201,125,7,tt0697811
-47,2885,Seinfeld,The Calzone,1996-04-25,9.0,1696,126,7,tt0697669
-46,2886,Seinfeld,The Bottle Deposit,1996-05-02,8.9,1653,127,7,tt0697660
-45,2887,Seinfeld,The Wait Out,1996-05-09,8.5,1181,128,7,tt0697807
-44,2888,Seinfeld,The Invitations,1996-05-16,8.8,1662,129,7,tt0697712
-43,2889,Seinfeld,The Foundation,1996-09-19,8.4,1202,130,8,tt0697699
-42,2890,Seinfeld,The Soul Mate,1996-09-26,8.2,1167,131,8,tt0697780
-41,2891,Seinfeld,The Bizarro Jerry,1996-10-03,9.2,2108,132,8,tt0697657
-40,2892,Seinfeld,The Little Kicks,1996-10-10,9.0,1842,133,8,tt0697725
-39,2893,Seinfeld,The Package,1996-10-17,8.8,1276,134,8,tt0697746
-38,2894,Seinfeld,The Fatigues,1996-10-31,8.3,1179,135,8,tt0697694
-37,2895,Seinfeld,The Checks,1996-11-07,8.3,1197,136,8,tt0697672
-36,2896,Seinfeld,The Chicken Roaster,1996-11-14,9.1,1962,137,8,tt0697674
-35,2897,Seinfeld,The Abstinence,1996-11-21,9.1,1769,138,8,tt0697646
-34,2898,Seinfeld,The Andrea Doria,1996-12-19,8.5,1193,139,8,tt0697649
-33,2899,Seinfeld,The Little Jerry,1997-01-09,8.5,1315,140,8,tt0697724
-32,2900,Seinfeld,The Money,1997-01-16,7.9,1123,141,8,tt0697734
-31,2901,Seinfeld,The Comeback,1997-01-30,8.8,1423,142,8,tt0697678
-30,2902,Seinfeld,The Van Buren Boys,1997-02-06,8.2,1195,143,8,tt0697803
-29,2903,Seinfeld,The Susie,1997-02-13,8.7,1319,144,8,tt0697795
-28,2904,Seinfeld,The Pothole,1997-02-20,8.8,1307,145,8,tt0697760
-27,2905,Seinfeld,The English Patient,1997-03-13,8.7,1344,146,8,tt0697691
-26,2906,Seinfeld,The Nap,1997-04-10,8.9,1592,147,8,tt0697737
-25,2907,Seinfeld,The Yada Yada,1997-04-24,9.0,2030,148,8,tt0697814
-24,2908,Seinfeld,The Millennium,1997-05-01,8.3,1206,149,8,tt0697732
-23,2909,Seinfeld,The Muffin Tops,1997-05-08,8.6,1356,150,8,tt0697736
-22,2910,Seinfeld,The Summer of George,1997-05-15,8.7,1343,151,8,tt0697794
-21,2911,Seinfeld,The Butter Shave,1997-09-25,8.6,1374,152,9,tt0697665
-20,2912,Seinfeld,The Voice,1997-10-02,8.6,1407,153,9,tt0697806
-19,2913,Seinfeld,The Serenity Now,1997-10-09,9.0,1904,154,9,tt0697773
-18,2914,Seinfeld,The Blood,1997-10-16,8.4,1255,155,9,tt0697658
-17,2915,Seinfeld,The Junk Mail,1997-10-30,8.2,1204,156,9,tt0697716
-16,2916,Seinfeld,The Merv Griffin Show,1997-11-06,9.1,2118,157,9,tt0697731
-15,2917,Seinfeld,The Slicer,1997-11-13,8.6,1272,158,9,tt0697777
-14,2918,Seinfeld,The Betrayal,1997-11-20,9.0,2211,159,9,tt0697655
-13,2919,Seinfeld,The Apology,1997-12-11,8.4,1219,160,9,tt0697651
-12,2920,Seinfeld,The Strike,1997-12-18,8.9,1869,161,9,tt0697790
-11,2921,Seinfeld,The Dealership,1998-01-08,8.7,1348,162,9,tt0697683
-10,2922,Seinfeld,The Reverse Peephole,1998-01-15,8.5,1263,163,9,tt0697767
-9,2923,Seinfeld,The Cartoon,1998-01-29,8.1,1202,164,9,tt0697670
-8,2924,Seinfeld,The Strongbox,1998-02-05,8.1,1218,165,9,tt0697791
-7,2925,Seinfeld,The Wizard,1998-02-26,8.2,1136,166,9,tt0697813
-6,2926,Seinfeld,The Burning,1998-03-19,8.6,1514,167,9,tt0697663
-5,2927,Seinfeld,The Bookstore,1998-04-09,8.5,1182,168,9,tt0697659
-4,2928,Seinfeld,The Frogger,1998-04-23,9.0,1783,169,9,tt0697701
-3,2929,Seinfeld,The Maid,1998-04-30,8.2,1177,170,9,tt0697727
-2,2930,Seinfeld,The Puerto Rican Day,1998-05-07,8.2,1269,171,9,tt0697761
-1,2931,Seinfeld,The Chronicle,1998-05-14,8.1,1111,172,9,tt0893212
-0,2932,Seinfeld,The Finale,1998-05-14,7.7,2142,173,9,tt0697695
+85,6096,Knight Rider,Knight of the Phoenix: Part 1,1982-09-26,7.3,1763,1,1,tt0084218
+84,6097,Knight Rider,Knight of the Phoenix: Part 2,1982-09-26,7.3,216,2,1,tt2388039
+83,6098,Knight Rider,Deadly Maneuvers,1982-10-01,6.9,246,3,1,tt0620811
+82,6099,Knight Rider,Good Day at White Rock,1982-10-08,7.1,226,4,1,tt0620820
+81,6100,Knight Rider,Slammin' Sammy's Stunt Show Spectacular,1982-10-22,7.1,208,5,1,tt0620871
+80,6101,Knight Rider,Just My Bill,1982-10-29,7.0,206,6,1,tt0620826
+79,6102,Knight Rider,Not a Drop to Drink,1982-11-05,6.8,201,7,1,tt0620862
+78,6103,Knight Rider,No Big Thing,1982-11-12,7.2,198,8,1,tt0620860
+77,6104,Knight Rider,Trust Doesn't Rust,1982-11-19,7.9,253,9,1,tt0620882
+76,6105,Knight Rider,Inside Out,1982-11-26,7.2,180,10,1,tt0620824
+75,6106,Knight Rider,The Final Verdict,1982-12-03,6.9,184,11,1,tt0620875
+74,6107,Knight Rider,A Plush Ride,1982-12-10,7.0,177,12,1,tt0620799
+73,6108,Knight Rider,Forget Me Not,1982-12-17,6.7,171,13,1,tt0620813
+72,6109,Knight Rider,Hearts of Stone,1983-01-14,6.8,175,14,1,tt0620822
+71,6110,Knight Rider,Give Me Liberty... or Give Me Death,1983-01-21,7.3,177,15,1,tt0620815
+70,6111,Knight Rider,The Topaz Connection,1983-01-28,6.9,178,16,1,tt0620880
+69,6112,Knight Rider,"A Nice, Indecent Little Town",1983-02-18,7.1,172,17,1,tt0620798
+68,6113,Knight Rider,Chariot of Gold,1983-02-25,7.1,181,18,1,tt0620805
+67,6114,Knight Rider,White Bird,1983-03-04,7.4,184,19,1,tt0620884
+66,6115,Knight Rider,Knight Moves,1983-03-11,6.9,173,20,1,tt0620834
+65,6116,Knight Rider,Nobody Does It Better,1983-04-29,6.9,170,21,1,tt0620861
+64,6117,Knight Rider,Short Notice,1983-05-06,6.9,179,22,1,tt0620868
+63,6118,Knight Rider,Goliath: Part 1,1983-10-02,7.7,192,23,2,tt0620818
+62,6119,Knight Rider,Goliath: Part 2,1983-10-02,7.6,124,24,2,tt2643950
+61,6120,Knight Rider,Brother's Keeper,1983-10-09,6.9,161,25,2,tt0620802
+60,6121,Knight Rider,Merchants of Death,1983-10-16,6.8,143,26,2,tt0620857
+59,6122,Knight Rider,Blind Spot,1983-10-23,7.3,148,27,2,tt0620801
+58,6123,Knight Rider,Return to Cadiz,1983-10-30,7.0,148,28,2,tt0620866
+57,6124,Knight Rider,K.I.T.T. the Cat,1983-11-06,7.2,156,29,2,tt0620827
+56,6125,Knight Rider,Custom K.I.T.T.,1983-11-13,7.2,146,30,2,tt0620807
+55,6126,Knight Rider,Soul Survivor,1983-11-27,7.2,163,31,2,tt0620872
+54,6127,Knight Rider,Ring of Fire,1983-12-04,6.9,139,32,2,tt0620867
+53,6128,Knight Rider,Knightmares,1983-12-11,7.3,151,33,2,tt0620852
+52,6129,Knight Rider,Silent Knight,1983-12-18,6.9,138,34,2,tt0620869
+51,6130,Knight Rider,A Knight in Shining Armor,1984-01-08,6.7,142,35,2,tt0620797
+50,6131,Knight Rider,Diamonds Aren't a Girl's Best Friend,1984-01-15,7.1,137,36,2,tt0620812
+49,6132,Knight Rider,White-Line Warriors,1984-01-29,7.3,136,37,2,tt0620885
+48,6133,Knight Rider,Race for Life,1984-02-05,7.2,140,38,2,tt0620864
+47,6134,Knight Rider,Speed Demons,1984-02-12,6.9,135,39,2,tt0620873
+46,6135,Knight Rider,Goliath Returns,1984-02-19,7.6,158,40,2,tt0620816
+45,6136,Knight Rider,A Good Knight's Work,1984-03-04,7.2,140,41,2,tt0620796
+44,6137,Knight Rider,Mouth of the Snake,1984-04-08,7.1,155,42,2,tt0620858
+43,6138,Knight Rider,Let It Be Me,1984-05-13,7.0,155,43,2,tt0620854
+42,6139,Knight Rider,Big Iron,1984-05-27,7.1,129,44,2,tt0620800
+41,6140,Knight Rider,Knight of the Drones,1984-09-30,7.6,149,45,3,tt0620844
+40,6141,Knight Rider,The Ice Bandits,1984-10-07,7.1,116,46,3,tt0620876
+39,6142,Knight Rider,Knights of the Fast Lane,1984-10-14,7.4,129,47,3,tt0620853
+38,6143,Knight Rider,Halloween Knight,1984-10-28,7.9,162,48,3,tt0620821
+37,6144,Knight Rider,K.I.T.T. vs. K.A.R.R.,1984-11-04,8.2,218,49,3,tt0620828
+36,6145,Knight Rider,The Rotten Apples,1984-11-11,7.1,117,50,3,tt0620878
+35,6146,Knight Rider,Knight in Disgrace,1984-11-18,7.6,127,51,3,tt0620840
+34,6147,Knight Rider,Dead of Knight,1984-12-02,7.7,121,52,3,tt0620809
+33,6148,Knight Rider,Lost Knight,1984-12-09,7.3,131,53,3,tt0620855
+32,6149,Knight Rider,Knight of the Chameleon,1984-12-30,7.3,119,54,3,tt0620843
+31,6150,Knight Rider,Custom Made Killer,1985-01-06,7.4,114,55,3,tt0620808
+30,6151,Knight Rider,Knight by a Nose,1985-01-13,7.0,114,56,3,tt0620839
+29,6152,Knight Rider,Junk Yard Dog,1985-02-03,7.6,138,57,3,tt0620825
+28,6153,Knight Rider,Buy Out,1985-02-10,7.3,121,58,3,tt0620804
+27,6154,Knight Rider,Knightlines,1985-03-03,7.1,117,59,3,tt0620851
+26,6155,Knight Rider,The Nineteenth Hole,1985-03-10,7.2,120,60,3,tt0620877
+25,6156,Knight Rider,Knight & Knerd,1985-03-17,7.3,127,61,3,tt0620831
+24,6157,Knight Rider,Ten Wheel Trouble,1985-03-24,7.3,126,62,3,tt0620874
+23,6158,Knight Rider,Knight in Retreat,1985-03-29,7.5,114,63,3,tt0620841
+22,6159,Knight Rider,Knight Strike,1985-04-05,7.3,113,64,3,tt0620838
+21,6160,Knight Rider,Circus Knights,1985-05-02,7.4,111,65,3,tt0620806
+20,6161,Knight Rider,Knight of the Juggernaut,1985-09-20,7.8,156,66,4,tt0620846
+19,6162,Knight Rider,KITTnap,1985-09-27,7.2,126,67,4,tt0620829
+18,6163,Knight Rider,Sky Knight,1985-10-18,7.4,127,68,4,tt0620870
+17,6164,Knight Rider,Burial Ground,1985-10-25,7.0,111,69,4,tt0620803
+16,6165,Knight Rider,The Wrong Crowd,1985-11-01,7.1,118,70,4,tt0620881
+15,6166,Knight Rider,Knight Sting,1985-11-08,7.3,113,71,4,tt0620837
+14,6167,Knight Rider,Many Happy Returns,1985-11-15,7.0,113,72,4,tt0620856
+13,6168,Knight Rider,Knight Racer,1985-11-29,7.2,118,73,4,tt0620835
+12,6169,Knight Rider,Knight Behind Bars,1985-12-06,7.2,106,74,4,tt0620832
+11,6170,Knight Rider,Knight Song,1985-12-13,7.1,114,75,4,tt0620836
+10,6171,Knight Rider,The Scent of Roses,1986-01-03,7.9,145,76,4,tt0620879
+9,6172,Knight Rider,Killer K.I.T.T.,1986-01-10,7.4,117,77,4,tt0620830
+8,6173,Knight Rider,Out of the Woods,1986-01-17,7.1,103,78,4,tt0620863
+7,6174,Knight Rider,Deadly Knightshade,1986-01-24,7.4,111,79,4,tt0620810
+6,6175,Knight Rider,Redemption of a Champion,1986-01-31,7.0,112,80,4,tt0620865
+5,6176,Knight Rider,Knight of a Thousand Devils,1986-02-07,7.1,110,81,4,tt0620842
+4,6177,Knight Rider,Hills of Fire,1986-02-14,6.9,108,82,4,tt0620823
+3,6178,Knight Rider,Knight Flight to Freedom,1986-02-21,7.1,104,83,4,tt0620833
+2,6179,Knight Rider,Fright Knight,1986-03-07,7.2,130,84,4,tt0620814
+1,6180,Knight Rider,Knight of the Rising Sun,1986-03-14,6.7,113,85,4,tt0620850
+0,6181,Knight Rider,Voo Doo Knight,1986-04-04,7.2,135,86,4,tt0620883

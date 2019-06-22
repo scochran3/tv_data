@@ -27,8 +27,6 @@ def getShowIMBDID(show):
 	r = requests.get(url)
 	data = json.loads(r.content)
 
-	pprint (data)
-	
 	try:
 		# Parse data
 		imbd_id = data['imdbID']
