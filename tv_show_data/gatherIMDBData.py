@@ -76,6 +76,7 @@ def getEpisodesData(show, first_season_to_scrape=1, number_of_episodes_already_i
 				break
 
 			# If everything is peachy parse the data
+			try:
 			rating = float(episode.find('span', {'class': 'ipl-rating-star__rating'}).text)
 			number_of_ratings = int(episode.find('span', {'class': 'ipl-rating-star__total-votes'}).text.replace('(','').replace(')', '').replace(',',''))
 			episode_link = episode.find('a', {'itemprop':'name'})

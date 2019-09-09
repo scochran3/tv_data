@@ -12,3 +12,4 @@ django_pandas
 pprint
 beautifulsoup4
 requests
+fuzzywuzzy

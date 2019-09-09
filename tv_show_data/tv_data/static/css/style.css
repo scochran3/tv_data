@@ -24,9 +24,9 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 .offcanvas #page {
   overflow: hidden;
@@ -48,9 +48,9 @@ body {
 
 a {
   color: #F36363;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 a:hover, a:active, a:focus {
   color: #F36363;
@@ -152,9 +152,9 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 18px;
   padding: 30px 15px;
   color: rgba(255, 255, 255, 0.8);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 .fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
   color: #000;
@@ -253,8 +253,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-header a {
-  color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
 }
 #fh5co-header a:hover {
   color: white;
@@ -594,15 +594,15 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   bottom: 0;
   overflow: hidden;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 #fh5co-project .fh5co-project > a img {
   position: relative;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 #fh5co-project .fh5co-project > a:after {
   opacity: 0;
@@ -619,9 +619,9 @@ h1, h2, h3, h4, h5, h6, figure {
   -o-box-shadow: inset 0px -34px 98px 8px rgba(0, 0, 0, 0.75);
   box-shadow: inset 0px -34px 98px 8px rgba(0, 0, 0, 0.75);
   z-index: 8;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 #fh5co-project .fh5co-project > a h3, #fh5co-project .fh5co-project > a span {
   z-index: 12;
@@ -687,9 +687,9 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-blog > a {
   display: block;
   position: relative;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 .fh5co-blog > a img {
   width: 100%;
@@ -707,9 +707,9 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 30px;
   float: left;
   margin-top: -5em;
-  -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
-  -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
-  box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.758);
+  -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.758);
+  box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.758);
 }
 .fh5co-blog .blog-text span {
   display: inline-block;
@@ -791,7 +791,7 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
 }
 #fh5co-testimonial .box-testimony a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
 }
 #fh5co-testimonial .box-testimony a:hover, #fh5co-testimonial .box-testimony a:focus, #fh5co-testimonial .box-testimony a:active {
   color: white;
@@ -852,7 +852,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-testimonial .box-testimony .author .subtext {
   display: block;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 16px;
 }
 
@@ -864,7 +864,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 20px !important;
 }
 #fh5co-started .fh5co-heading p {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
 }
 #fh5co-started .btn {
   height: 54px;
@@ -962,9 +962,9 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-transform: translateX(270px);
   -o-transform: translateX(270px);
   transform: translateX(270px);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 @media screen and (max-width: 768px) {
   #fh5co-offcanvas {
@@ -979,7 +979,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transform: translateX(0px);
 }
 #fh5co-offcanvas a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
 }
 #fh5co-offcanvas a:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -1017,9 +1017,9 @@ h1, h2, h3, h4, h5, h6, figure {
   content: "\e921";
   font-size: 20px;
   color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 #fh5co-offcanvas ul li.offcanvas-has-dropdown.active a:after {
   -webkit-transform: rotate(-180deg);
@@ -1044,9 +1044,9 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
 }
 .gototop.active {
   opacity: 1;
@@ -1056,7 +1056,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 50px;
   height: 50px;
   display: table;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   color: #fff;
   text-align: center;
   -webkit-border-radius: 4px;
@@ -1184,9 +1184,9 @@ h1, h2, h3, h4, h5, h6, figure {
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   border-radius: 30px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
   padding: 8px 20px;
 }
 .btn.btn-md {
@@ -1337,7 +1337,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .form-control {
   box-shadow: none;
   background: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.75);
   height: 54px;
   font-size: 18px;
 }
