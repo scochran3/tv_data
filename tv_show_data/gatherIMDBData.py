@@ -77,19 +77,21 @@ def getEpisodesData(show, first_season_to_scrape=1, number_of_episodes_already_i
 
 			# If everything is peachy parse the data
 			try:
-			rating = float(episode.find('span', {'class': 'ipl-rating-star__rating'}).text)
-			number_of_ratings = int(episode.find('span', {'class': 'ipl-rating-star__total-votes'}).text.replace('(','').replace(')', '').replace(',',''))
-			episode_link = episode.find('a', {'itemprop':'name'})
-			title = episode_link.text
-			episode_id = episode_link['href'][7:-1]
+				rating = float(episode.find('span', {'class': 'ipl-rating-star__rating'}).text)
+				number_of_ratings = int(episode.find('span', {'class': 'ipl-rating-star__total-votes'}).text.replace('(','').replace(')', '').replace(',',''))
+				episode_link = episode.find('a', {'itemprop':'name'})
+				title = episode_link.text
+				episode_id = episode_link['href'][7:-1]
 
-			# Append lists
-			all_titles.append(title)
-			all_ratings.append(rating)
-			all_air_dates.append(air_date)
-			all_number_of_ratings.append(number_of_ratings)
-			all_episode_id.append(episode_id)
-			all_season_numbers.append(i)
+				# Append lists
+				all_titles.append(title)
+				all_ratings.append(rating)
+				all_air_dates.append(air_date)
+				all_number_of_ratings.append(number_of_ratings)
+				all_episode_id.append(episode_id)
+				all_season_numbers.append(i)
+			except:
+				continue
 
 	# Add all of our data to a dataframe
 	df = pd.DataFrame(data={'show':show,
