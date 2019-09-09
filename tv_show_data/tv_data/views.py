@@ -5,7 +5,6 @@ from django.shortcuts import redirect
 from django.utils.text import slugify
 from django_pandas.io import read_frame
 import createIMDBVisualizations
-from fuzzywuzzy import fuzz, process
 from django.db.models import Max
 from django.template import RequestContext
 
